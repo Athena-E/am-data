@@ -1,15 +1,27 @@
 import json 
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-def get_payload_object(data):
-    # extracts id, timestamp, payload from JSON sensor data
+def extract_payload(data):
+    # returns JSON of id, timestamp, payload from full JSON sensor data
     parsed_data = json.loads(data)
     payload_obj = {
         "acp_id": parsed_data.get("acp_id"),
         "acp_ts": parsed_data.get("acp_ts"),
-        "payload_cooked": parsed_data.get("payload_cooked")
+        "temperature": parsed_data.get("payload_cooked", {}).get("temperature"),
+        "humidity": parsed_data.get("payload_cooked", {}).get("humidity"),
+        "co2": parsed_data.get("payload_cooked", {}).get("co2"),
     }
     return payload_obj
+
+def get_day_data(fname):
+    # returns list of JSON extracted data for a preprocessed data file
+    filename = f"../data/preprocessed/{fname}"
+    day_data = []
+    with open(filename, "r") as file:
+        for line in file:
+            try:
+                payload_obj = extract_payload(line)
+                day_data.append(payload_obj)
+            except json.JSONDecodeError as e:
+                print(f"Error parsing line: {e}")
+    return day_data
 
