@@ -14,25 +14,28 @@ def insert_sensor_data(data):
     humidity = data.get("humidity")
     co2 = data.get("co2")
 
-    with app.app_context():
-        # cursor = get_db().cursor()
-        # cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ?", (timestamp))
-        # existing = cursor.fetchone()
-        existing = False
-        if not existing:
-            query = '''
-            INSERT INTO sensor_data (timestamp, temperature, humidity, co2)
-            VALUES (?, ?, ?, ?)
-            '''
+    if all(v is not None for v in (timestamp, temperature, humidity, co2)):
+        with app.app_context():
+            # check for duplicate records
+            cursor = get_db().cursor()
+            cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ?", (timestamp,))
+            existing = cursor.fetchone()
 
-            db = get_db()
-            db.execute(query, (timestamp, temperature, humidity, co2))
-            db.commit()
+            if not existing:
+                query = '''
+                INSERT INTO sensor_data (timestamp, temperature, humidity, co2)
+                VALUES (?, ?, ?, ?)
+                '''
+
+                db = get_db()
+                db.execute(query, (timestamp, temperature, humidity, co2))
+                db.commit()
+    else:
+        print("Null payload")
 
 
 def insert_list_sensor_data(data_list):
     # insert list of extracted data into database
-    # for data in data_list:
-    #     insert_sensor_data(data)
-    insert_sensor_data(data_list[0])
+    for data in data_list:
+        insert_sensor_data(data)
 
