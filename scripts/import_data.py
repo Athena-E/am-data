@@ -18,5 +18,5 @@ if __name__ == "__main__":
     for f in data_files:
         all_extracted += get_day_data(f)
 
-    insert_list_sensor_data([all_extracted[0]])
+    insert_list_sensor_data(all_extracted)
     print("Records inserted")

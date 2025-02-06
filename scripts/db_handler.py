@@ -21,15 +21,17 @@ class DatabaseHandler:
             conn = sqlite3.connect(DATABASE)
             df = pd.read_sql_query(f"SELECT * FROM {self.preprocessed_tbl}", conn)
             conn.close()
+        return df
 
-    def get_by_timestamp(self, timestamp, sensor_id):
+    def get_by_ts_id(self, timestamp, sensor_id):
         with app.app_context():
             cursor = get_db().cursor()
             cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp, sensor_id))
+            df = pd.read_sql_query()
 
     # read entry function (readable timestamp)
 
 if __name__ == "__main__":
     db_handler = DatabaseHandler()
     db_handler.get_all_preprocessed()
-    db_handler.get_by_timestamp("1737590422.711448", "0520a5")
+    db_handler.get_by_ts_id("1737590422.711448", "0520a5")
