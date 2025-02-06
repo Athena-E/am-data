@@ -5,8 +5,9 @@ import json
 def extract_payload(data):
     # returns JSON of id, timestamp, payload from full JSON sensor data
     parsed_data = json.loads(data)
+    sensor_id = parsed_data.get("acp_id").split("elsys-co2-")[-1]
     payload_obj = {
-        "acp_id": parsed_data.get("acp_id"),
+        "acp_id": sensor_id,
         "acp_ts": parsed_data.get("acp_ts"),
         "temperature": parsed_data.get("payload_cooked", {}).get("temperature"),
         "humidity": parsed_data.get("payload_cooked", {}).get("humidity"),
