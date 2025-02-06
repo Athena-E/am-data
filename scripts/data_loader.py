@@ -1,5 +1,7 @@
 import json 
 
+# methods for parsing and loading data from raw files
+
 def extract_payload(data):
     # returns JSON of id, timestamp, payload from full JSON sensor data
     parsed_data = json.loads(data)

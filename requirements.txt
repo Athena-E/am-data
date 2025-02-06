@@ -1,10 +1,14 @@
 blinker==1.8.2
 click==8.1.8
 Flask==3.0.3
-gunicorn==23.0.0
 itsdangerous==2.2.0
 Jinja2==3.1.5
 MarkupSafe==2.1.5
-packaging==24.2
+numpy==2.2.2
+pandas==2.2.3
+python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
+pytz==2025.1
+six==1.17.0
+tzdata==2025.1
 Werkzeug==3.0.6

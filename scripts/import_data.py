@@ -7,7 +7,7 @@ from scripts.db_insert_data import insert_list_sensor_data
 from scripts.data_loader import get_day_data
 
 if __name__ == "__main__":
-    # Add data to the database from preprocessed folder
+    # Add all data to the database from preprocessed folder
     
     PREPROCESSED_DIR = '../data/preprocessed'
 

@@ -5,6 +5,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from app import create_app
 from app.database import get_db
 
+# methods for creating records and inserting into database
+
 app = create_app()
 
 def insert_sensor_data(data):
