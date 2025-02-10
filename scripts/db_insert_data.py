@@ -2,6 +2,8 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+from tqdm import tqdm
+
 from app.database import get_db
 from run import app
 
@@ -17,26 +19,26 @@ def insert_sensor_data(data):
 
     if all(v is not None for v in (timestamp, temperature, humidity, co2)):
         with app.app_context():
+
+            db = get_db()
             # check for duplicate records
-            cursor = get_db().cursor()
-            cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp,sensor_id))
-            existing = cursor.fetchone()
+            # cursor = db.cursor()
+            # cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp,sensor_id))
+            # existing = cursor.fetchone()
 
-            if not existing:
-                query = '''
-                INSERT INTO sensor_data (sensor_id, timestamp, temperature, humidity, co2)
-                VALUES (?, ?, ?, ?, ?)
-                '''
+            # if not existing:
+            # Added (OR IGNORE)
+            query = '''
+            INSERT OR IGNORE INTO sensor_data (sensor_id, timestamp, temperature, humidity, co2)
+            VALUES (?, ?, ?, ?, ?)
+            '''
 
-                db = get_db()
-                db.execute(query, (sensor_id, timestamp, temperature, humidity, co2))
-                db.commit()
-    else:
-        print("Null payload")
+            db.execute(query, (sensor_id, timestamp, temperature, humidity, co2))
+            db.commit()
 
 
 def insert_list_sensor_data(data_list):
     # insert list of extracted data into database
-    for data in data_list:
+    for data in tqdm(data_list, desc="Inserting sensor data", unit="item"):
         insert_sensor_data(data)
 

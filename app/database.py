@@ -17,8 +17,8 @@ def close_db(e=None):
         db.close()
 
 def init_db():
-    if not os.path.exists(DATABASE):
+    if not os.path.exists(DATABASE): # WIll break if .db exists, but table does not
         conn = sqlite3.connect(DATABASE)
-        with open("../scripts/schema.sql") as f: # AE - modified to relative path
+        with open("./scripts/schema.sql") as f: # AE - modified to relative path
             conn.executescript(f.read())
         conn.close()

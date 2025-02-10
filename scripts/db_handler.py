@@ -13,16 +13,17 @@ DATABASE = Config.DATABASE_PATH
 
 class DatabaseHandler:
 
-    def __init__(self) -> None:
-        self.preprocessed_tbl = "sensor_data"
+    preprocessed_tbl = "sensor_data"
 
-    def get_all_preprocessed(self):
+    @staticmethod
+    def get_all_preprocessed():
         with app.app_context():
             conn = sqlite3.connect(DATABASE)
-            df = pd.read_sql_query(f"SELECT * FROM {self.preprocessed_tbl}", conn)
+            df = pd.read_sql_query(f"SELECT * FROM {DatabaseHandler.preprocessed_tbl}", conn)
             conn.close()
         return df
 
+    @staticmethod
     def get_by_ts_id(self, timestamp, sensor_id):
         with app.app_context():
             cursor = get_db().cursor()

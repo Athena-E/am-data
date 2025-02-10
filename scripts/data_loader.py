@@ -17,7 +17,7 @@ def extract_payload(data):
 
 def get_day_data(fname):
     # returns list of JSON extracted data for a preprocessed data file
-    filename = f"../data/preprocessed/{fname}"
+    filename = f"./data/preprocessed/{fname}"
     day_data = []
     with open(filename, "r") as file:
         for line in file:
