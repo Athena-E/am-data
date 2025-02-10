@@ -32,11 +32,11 @@ class SingleValueKalmanFilter:
                           [0.0]])  # assume initial rate of change is 0
         
         # Initial uncertainty covariance matrix
-        self.P = np.array([[10.0, 0],
-                          [0, 10.0]])  # start with high uncertainty
+        self.P = np.array([[1000.0, 0],
+                          [0, 1000.0]])  # start with high uncertainty
         
         # Measurement noise (R)
-        self.R = np.array([[variance]])
+        self.R = np.array([[variance * 100]])
         
         # Measurement matrix (H)
         self.H = np.array([[1.0, 0]])  # we only measure value
@@ -62,7 +62,7 @@ class SingleValueKalmanFilter:
         
         # Process noise covariance matrix
         # Using a simplified continuous white noise model
-        q = 0.1  # process noise parameter (can be tuned)
+        q = 30  # process noise parameter (can be tuned)
         Q = np.array([[q * dt**3 / 3, q * dt**2 / 2],
                      [q * dt**2 / 2, q * dt]])
         

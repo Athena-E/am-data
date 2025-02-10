@@ -24,6 +24,7 @@ def vectorized_kalman(values, time_deltas, variance):
         dt = time_deltas[i] if i > 0 else 1  # Use 1 as the default dt for the first value
         smoothed_values[i] = kf.update(values[i], dt)
 
+    # print(smoothed_values[-10:])
     return smoothed_values
 
 def process_group(group, col, variance):
@@ -69,7 +70,7 @@ def plot_sensor_data(df, sensor_id, day, col='co2'):
     plt.xlim(df_filtered['timestamp'].min(), df_filtered['timestamp'].max())
 
     # Optionally, format the x-axis to show just the time of day (if the data includes time)
-    # plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M'))
+    plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M'))
 
     plt.tight_layout()
     plt.show()
@@ -80,7 +81,7 @@ def clean():
 
     df = DatabaseHandler.get_all_preprocessed()
     
-    VARIANCE = 3
+    VARIANCE = 10
 
     df['timestamp'] = pd.to_numeric(df['timestamp'])
 
@@ -91,11 +92,20 @@ def clean():
 
     groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
 
-    result = Parallel(n_jobs=-1)(
-        delayed(process_group)(group, 'co2', variance=VARIANCE) for group in groups
-    )
+    plot_sensor_data(df, '0520a5', '2025-01-20')
 
-    final_df = pd.concat(result, ignore_index=True)
+    # group = process_group(groups[1], 'co2', VARIANCE)
+    df['new_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
+
+    # print("Original Values:", groups[1][-10:])  # Print the first few values
+
+    plot_sensor_data(df, '0520a5', '2025-01-20', col='new_co2')
+
+    # result = Parallel(n_jobs=-1)(
+    #     delayed(process_group)(group, 'co2', variance=VARIANCE) for group in groups
+    # )
+
+    # final_df = pd.concat(result, ignore_index=True)
 
     # plot_sensor_data(final_df, '0520a5', '2025-01-20')
 
