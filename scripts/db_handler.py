@@ -17,6 +17,7 @@ class DatabaseHandler:
 
     @staticmethod
     def get_all_preprocessed():
+        # return all database data as data frame
         with app.app_context():
             conn = sqlite3.connect(DATABASE)
             df = pd.read_sql_query(f"SELECT * FROM {DatabaseHandler.preprocessed_tbl}", conn)
@@ -24,11 +25,14 @@ class DatabaseHandler:
         return df
 
     @staticmethod
-    def get_by_ts_id(self, timestamp, sensor_id):
+    def get_by_ts_id(timestamp, sensor_id):
+        # return record by timestamp and sensor id as a data frame
         with app.app_context():
-            cursor = get_db().cursor()
-            cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp, sensor_id))
-            df = pd.read_sql_query()
+            conn = sqlite3.connect(DATABASE)
+            # cursor = get_db().cursor()
+            # cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp, sensor_id))
+            df = pd.read_sql_query(f"SELECT * FROM sensor_data WHERE timestamp = {timestamp} AND sensor_id = {sensor_id}", conn)
+        return df
 
     # read entry function (readable timestamp)
 
