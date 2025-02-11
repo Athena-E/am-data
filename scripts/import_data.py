@@ -9,7 +9,7 @@ from scripts.data_loader import get_day_data
 if __name__ == "__main__":
     # Add all data to the database from preprocessed folder
     
-    PREPROCESSED_DIR = './app/data/preprocessed'
+    PREPROCESSED_DIR = './data/preprocessed'
 
     # get all preprocessed day data files
     data_files = [f for f in os.listdir(PREPROCESSED_DIR) if os.path.isfile(os.path.join(PREPROCESSED_DIR, f))]
