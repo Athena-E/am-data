@@ -4,7 +4,8 @@ from datetime import datetime
 from pathlib import Path
 
 def parse_ical(ics_path):
-    with ics_path.open() as f:
+    ics = Path(ics_path)
+    with ics.open() as f:
         cal = Calendar.from_ical(f.read())
     events = []
 
@@ -17,9 +18,12 @@ def parse_ical(ics_path):
             "description": str(event.get("DESCRIPTION")),
             "uid": str(event.get("UID")),
         }
-        events.append(event_data)
+        if event_data["location"] == "LT1":
+            events.append(event_data)   
 
     return events
+
+# {'summary': 'Artificial Intelligence', 'start': datetime.datetime(2025, 5, 28, 11, 0, tzinfo=zoneinfo.ZoneInfo(key='UTC')), 'end': datetime.datetime(2025, 5, 28, 12, 0, tzinfo=zoneinfo.ZoneInfo(key='UTC')), 'location': 'LT1', 'description': 'Lecture with Dr S Holden', 'uid': '1204379'}
 
 if __name__ == "__main__":
     events = parse_ical("./calendar.ical")
