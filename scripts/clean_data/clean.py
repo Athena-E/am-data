@@ -90,16 +90,18 @@ def clean():
         (df['timestamp'] - pd.to_timedelta(6, unit='h')).dt.floor('24h') + pd.to_timedelta(6, unit='h')
     )
 
-    groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
+    # groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
 
-    plot_sensor_data(df, '0520a5', '2025-01-20')
+    # plot_sensor_data(df, '0520a5', '2025-01-20')
 
     # group = process_group(groups[1], 'co2', VARIANCE)
-    df['new_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
+    df['clean_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
+    df['clean_temperature'] = df['temperature'].ewm(span=20, adjust=False).mean()
+    df['clean_humidity'] = df['humidity'].ewm(span=20, adjust=False).mean()
 
     # print("Original Values:", groups[1][-10:])  # Print the first few values
 
-    plot_sensor_data(df, '0520a5', '2025-01-20', col='new_co2')
+    # plot_sensor_data(df, '0520a5', '2025-01-20', col='new_co2')
 
     # result = Parallel(n_jobs=-1)(
     #     delayed(process_group)(group, 'co2', variance=VARIANCE) for group in groups
@@ -108,6 +110,12 @@ def clean():
     # final_df = pd.concat(result, ignore_index=True)
 
     # plot_sensor_data(final_df, '0520a5', '2025-01-20')
+
+    return {
+        'clean_co2': df['clean_co2'],
+        'clean_temperature': df['clean_temperature'],
+        'clean_humidity': df['clean_humidity']
+    }
 
 
 
