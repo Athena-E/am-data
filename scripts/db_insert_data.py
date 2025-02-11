@@ -7,7 +7,7 @@ from app.database import get_db
 from run import app
 
 def insert_list_sensor_data(data_list):
-    """ Insert a list of extracted sensor data into the database efficiently. """
+    # insert list of sensor data as records into database
     with app.app_context():
         db = get_db()
         query = '''
@@ -15,7 +15,6 @@ def insert_list_sensor_data(data_list):
         VALUES (?, ?, ?, ?, ?)
         '''
         
-        # Convert list of dictionaries to a list of tuples
         records = [
             (data["acp_id"], data["acp_ts"], data["temperature"], data["humidity"], data["co2"])
             for data in data_list
