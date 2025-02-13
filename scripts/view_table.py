@@ -10,6 +10,8 @@ def display_table():
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
+
+    print('sensor data:')
     
     cursor.execute("SELECT * FROM sensor_data")
     
@@ -17,6 +19,14 @@ def display_table():
     for row in rows:
         print({col: row[col] for col in row.keys()})
     
+    print('coordinates:')
+
+    cursor.execute("SELECT * FROM coordinates")
+
+    rows = cursor.fetchall()
+    for row in rows:
+        print({col: row[col] for col in row.keys()})
+
     conn.close()
 
 if __name__ == "__main__":
