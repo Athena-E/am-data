@@ -16,7 +16,7 @@ parser.add_argument("--clean-data", help="Clean Database?", action=argparse.Bool
 
 args = parser.parse_args()
 
-
+#* Run ```python -m scripts.main --add-db --clean-data```
 def main():
     
     if (args.add_db):
