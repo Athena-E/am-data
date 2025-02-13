@@ -3,3 +3,4 @@ venv/
 .env
 __pycache__/
 data/*.db
+data/sensor_data_2025

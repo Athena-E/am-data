@@ -29,11 +29,11 @@ class DatabaseHandler:
         # return record by timestamp and sensor id as a data frame
         with app.app_context():
             conn = sqlite3.connect(DATABASE)
-            # cursor = get_db().cursor()
-            # cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp, sensor_id))
-            df = pd.read_sql_query(f"SELECT * FROM sensor_data WHERE timestamp = {timestamp} AND sensor_id = {sensor_id}", conn)
+            query = "SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?"
+            df = pd.read_sql_query(query, conn, params=(timestamp, sensor_id))
+
             conn.close()
-        return df
+            return df
     
     @staticmethod
     def update_clean_db(df, *new_cols):
@@ -63,5 +63,6 @@ class DatabaseHandler:
 
 if __name__ == "__main__":
     db_handler = DatabaseHandler()
-    db_handler.get_all_preprocessed()
-    db_handler.get_by_ts_id("1737590422.711448", "0520a5")
+    # db_handler.get_all_preprocessed()
+    # df = db_handler.get_by_ts_id("1737590422.711448", "0520a5")
+    # print(df)
