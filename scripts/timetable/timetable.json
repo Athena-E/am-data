@@ -1,0 +1,2418 @@
+[
+    {
+        "summary": "Part IA briefing and Ice-breaker",
+        "start": "2024-10-09T12:45:00+00:00",
+        "end": "2024-10-09T15:15:00+00:00",
+        "location": "LT1",
+        "description": "Lecture",
+        "uid": "1202932"
+    },
+    {
+        "summary": "LaTeX and Julia",
+        "start": "2024-10-10T08:00:00+00:00",
+        "end": "2024-10-10T09:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Markus G. Kuhn",
+        "uid": "1203509"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-10T10:00:00+00:00",
+        "end": "2024-10-10T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203327"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-11T10:00:00+00:00",
+        "end": "2024-10-11T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203538"
+    },
+    {
+        "summary": "Programming in C and C++",
+        "start": "2024-10-11T11:00:00+00:00",
+        "end": "2024-10-11T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D. Greaves",
+        "uid": "1204416"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-14T09:00:00+00:00",
+        "end": "2024-10-14T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204375"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-14T10:00:00+00:00",
+        "end": "2024-10-14T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203528"
+    },
+    {
+        "summary": "LaTeX and Julia",
+        "start": "2024-10-15T08:00:00+00:00",
+        "end": "2024-10-15T09:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Markus G. Kuhn",
+        "uid": "1203510"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-15T10:00:00+00:00",
+        "end": "2024-10-15T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203341"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-16T09:00:00+00:00",
+        "end": "2024-10-16T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204369"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-16T10:00:00+00:00",
+        "end": "2024-10-16T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203532"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-17T10:00:00+00:00",
+        "end": "2024-10-17T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203340"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-18T09:00:00+00:00",
+        "end": "2024-10-18T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204370"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-18T10:00:00+00:00",
+        "end": "2024-10-18T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203527"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-21T09:00:00+00:00",
+        "end": "2024-10-21T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204372"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-21T10:00:00+00:00",
+        "end": "2024-10-21T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203529"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-22T10:00:00+00:00",
+        "end": "2024-10-22T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203339"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-10-22T11:00:00+00:00",
+        "end": "2024-10-22T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203351"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-23T09:00:00+00:00",
+        "end": "2024-10-23T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204371"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-23T10:00:00+00:00",
+        "end": "2024-10-23T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203535"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-24T10:00:00+00:00",
+        "end": "2024-10-24T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203333"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-10-24T11:00:00+00:00",
+        "end": "2024-10-24T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203348"
+    },
+    {
+        "summary": "Part 1A Library Induction",
+        "start": "2024-10-24T13:00:00+00:00",
+        "end": "2024-10-24T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar",
+        "uid": "1202931"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-25T09:00:00+00:00",
+        "end": "2024-10-25T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1251646"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-25T10:00:00+00:00",
+        "end": "2024-10-25T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203533"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-28T10:00:00+00:00",
+        "end": "2024-10-28T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204368"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-28T11:00:00+00:00",
+        "end": "2024-10-28T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203537"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-29T11:00:00+00:00",
+        "end": "2024-10-29T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203330"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-10-29T12:00:00+00:00",
+        "end": "2024-10-29T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203346"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-10-30T09:00:00+00:00",
+        "end": "2024-10-30T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203270"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-10-30T10:00:00+00:00",
+        "end": "2024-10-30T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with RD Mullins",
+        "uid": "1204374"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-10-30T11:00:00+00:00",
+        "end": "2024-10-30T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203534"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-10-31T11:00:00+00:00",
+        "end": "2024-10-31T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203338"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-10-31T12:00:00+00:00",
+        "end": "2024-10-31T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203347"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-01T09:00:00+00:00",
+        "end": "2024-11-01T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203268"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-01T10:00:00+00:00",
+        "end": "2024-11-01T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204376"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-11-01T11:00:00+00:00",
+        "end": "2024-11-01T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203536"
+    },
+    {
+        "summary": "Programming in C and C++",
+        "start": "2024-11-01T12:00:00+00:00",
+        "end": "2024-11-01T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D. Greaves",
+        "uid": "1204424"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-04T10:00:00+00:00",
+        "end": "2024-11-04T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204373"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-11-04T11:00:00+00:00",
+        "end": "2024-11-04T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203530"
+    },
+    {
+        "summary": "Programming in C and C++",
+        "start": "2024-11-04T12:00:00+00:00",
+        "end": "2024-11-04T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D. Greaves",
+        "uid": "1204425"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-05T11:00:00+00:00",
+        "end": "2024-11-05T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203331"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-05T12:00:00+00:00",
+        "end": "2024-11-05T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203349"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-06T09:00:00+00:00",
+        "end": "2024-11-06T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203271"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-06T10:00:00+00:00",
+        "end": "2024-11-06T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204365"
+    },
+    {
+        "summary": "Types",
+        "start": "2024-11-06T11:00:00+00:00",
+        "end": "2024-11-06T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr N. Krishnaswami",
+        "uid": "1203531"
+    },
+    {
+        "summary": "Programming in C and C++",
+        "start": "2024-11-06T12:00:00+00:00",
+        "end": "2024-11-06T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D. Greaves",
+        "uid": "1204426"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-07T10:00:00+00:00",
+        "end": "2024-11-07T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Konstantinos Ioannidis",
+        "uid": "1204407"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-07T11:00:00+00:00",
+        "end": "2024-11-07T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203335"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-07T12:00:00+00:00",
+        "end": "2024-11-07T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203353"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-08T09:00:00+00:00",
+        "end": "2024-11-08T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203267"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-08T10:00:00+00:00",
+        "end": "2024-11-08T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204363"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-11-08T12:00:00+00:00",
+        "end": "2024-11-08T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204399"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-08T13:00:00+00:00",
+        "end": "2024-11-08T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203382"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-11-11T11:00:00+00:00",
+        "end": "2024-11-11T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203470"
+    },
+    {
+        "summary": "Semantics in Programming Languages",
+        "start": "2024-11-11T12:00:00+00:00",
+        "end": "2024-11-11T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204395"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-11T13:00:00+00:00",
+        "end": "2024-11-11T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203383"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-12T10:00:00+00:00",
+        "end": "2024-11-12T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Konstantinos Ioannidis",
+        "uid": "1204414"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-12T11:00:00+00:00",
+        "end": "2024-11-12T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203328"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-12T12:00:00+00:00",
+        "end": "2024-11-12T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203345"
+    },
+    {
+        "summary": "Databases",
+        "start": "2024-11-12T13:00:00+00:00",
+        "end": "2024-11-12T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D.J. Greaves",
+        "uid": "1202973"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-13T09:00:00+00:00",
+        "end": "2024-11-13T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203272"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-13T10:00:00+00:00",
+        "end": "2024-11-13T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204364"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-11-13T11:00:00+00:00",
+        "end": "2024-11-13T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203471"
+    },
+    {
+        "summary": "Semantics in Programming Languages",
+        "start": "2024-11-13T12:00:00+00:00",
+        "end": "2024-11-13T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204397"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-13T13:00:00+00:00",
+        "end": "2024-11-13T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203384"
+    },
+    {
+        "summary": "Wed Seminar - Computing for Climate Science and Programming for the Planet",
+        "start": "2024-11-13T15:00:00+00:00",
+        "end": "2024-11-13T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Dominic Orchard",
+        "uid": "1262927"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-14T10:00:00+00:00",
+        "end": "2024-11-14T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Konstantinos Ioannidis",
+        "uid": "1204409"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-14T11:00:00+00:00",
+        "end": "2024-11-14T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203329"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-14T12:00:00+00:00",
+        "end": "2024-11-14T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203343"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-15T09:00:00+00:00",
+        "end": "2024-11-15T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203266"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-15T10:00:00+00:00",
+        "end": "2024-11-15T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204367"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-11-15T12:00:00+00:00",
+        "end": "2024-11-15T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204400"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-15T13:00:00+00:00",
+        "end": "2024-11-15T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203385"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-18T10:00:00+00:00",
+        "end": "2024-11-18T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1204377"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-11-18T11:00:00+00:00",
+        "end": "2024-11-18T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203474"
+    },
+    {
+        "summary": "Semantics in Programming Languages",
+        "start": "2024-11-18T12:00:00+00:00",
+        "end": "2024-11-18T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204396"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-18T13:00:00+00:00",
+        "end": "2024-11-18T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203392"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-19T10:00:00+00:00",
+        "end": "2024-11-19T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Konstantinos Ioannidis",
+        "uid": "1204410"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-19T11:00:00+00:00",
+        "end": "2024-11-19T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203334"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-19T12:00:00+00:00",
+        "end": "2024-11-19T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203350"
+    },
+    {
+        "summary": "Databases",
+        "start": "2024-11-19T13:00:00+00:00",
+        "end": "2024-11-19T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D.J. Greaves",
+        "uid": "1202977"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-20T09:00:00+00:00",
+        "end": "2024-11-20T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203273"
+    },
+    {
+        "summary": "Introduction to Computer Architecture",
+        "start": "2024-11-20T10:00:00+00:00",
+        "end": "2024-11-20T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Tim Jones",
+        "uid": "1262767"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-11-20T11:00:00+00:00",
+        "end": "2024-11-20T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203473"
+    },
+    {
+        "summary": "Semantics in Programming Languages",
+        "start": "2024-11-20T12:00:00+00:00",
+        "end": "2024-11-20T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204398"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-20T13:00:00+00:00",
+        "end": "2024-11-20T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203386"
+    },
+    {
+        "summary": "Wed Seminar - Sensing human activities: from the lab to the home of the elderly",
+        "start": "2024-11-20T15:00:00+00:00",
+        "end": "2024-11-20T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof Claudio Bettin",
+        "uid": "1262928"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-21T10:00:00+00:00",
+        "end": "2024-11-21T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Jennifer Cobbe",
+        "uid": "1204412"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-21T11:00:00+00:00",
+        "end": "2024-11-21T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203332"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-21T12:00:00+00:00",
+        "end": "2024-11-21T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203352"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-22T09:00:00+00:00",
+        "end": "2024-11-22T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203265"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-11-22T12:00:00+00:00",
+        "end": "2024-11-22T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204401"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-22T13:00:00+00:00",
+        "end": "2024-11-22T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203387"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-11-25T11:00:00+00:00",
+        "end": "2024-11-25T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203475"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-11-25T12:00:00+00:00",
+        "end": "2024-11-25T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204402"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-25T13:00:00+00:00",
+        "end": "2024-11-25T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203388"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-26T10:00:00+00:00",
+        "end": "2024-11-26T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Richard Clayton",
+        "uid": "1204413"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-26T11:00:00+00:00",
+        "end": "2024-11-26T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203336"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-26T12:00:00+00:00",
+        "end": "2024-11-26T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203355"
+    },
+    {
+        "summary": "Databases",
+        "start": "2024-11-26T13:00:00+00:00",
+        "end": "2024-11-26T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D.J. Greaves",
+        "uid": "1202974"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-27T09:00:00+00:00",
+        "end": "2024-11-27T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203274"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-11-27T11:00:00+00:00",
+        "end": "2024-11-27T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203476"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-11-27T12:00:00+00:00",
+        "end": "2024-11-27T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204403"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-27T13:00:00+00:00",
+        "end": "2024-11-27T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203389"
+    },
+    {
+        "summary": "Wed Seminar - The first AGI will be Federated",
+        "start": "2024-11-27T15:00:00+00:00",
+        "end": "2024-11-27T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof Nic Lane",
+        "uid": "1262929"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-11-28T10:00:00+00:00",
+        "end": "2024-11-28T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Claire Benn",
+        "uid": "1204408"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-11-28T11:00:00+00:00",
+        "end": "2024-11-28T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203337"
+    },
+    {
+        "summary": "Bioinformatics",
+        "start": "2024-11-28T12:00:00+00:00",
+        "end": "2024-11-28T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Lio",
+        "uid": "1203344"
+    },
+    {
+        "summary": "Scientific Computing Practical Course Briefing",
+        "start": "2024-11-28T16:00:00+00:00",
+        "end": "2024-11-28T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Andrew Moore",
+        "uid": "1203115"
+    },
+    {
+        "summary": "Denotational Semantics",
+        "start": "2024-11-29T09:00:00+00:00",
+        "end": "2024-11-29T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr M. Lennon-Bertrand",
+        "uid": "1203269"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-11-29T12:00:00+00:00",
+        "end": "2024-11-29T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204404"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-11-29T13:00:00+00:00",
+        "end": "2024-11-29T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203390"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-12-02T11:00:00+00:00",
+        "end": "2024-12-02T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203477"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-12-02T12:00:00+00:00",
+        "end": "2024-12-02T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204405"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-12-02T13:00:00+00:00",
+        "end": "2024-12-02T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203391"
+    },
+    {
+        "summary": "Economics Law and Ethics",
+        "start": "2024-12-03T10:00:00+00:00",
+        "end": "2024-12-03T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Alan Blackwell",
+        "uid": "1204411"
+    },
+    {
+        "summary": "Principles of Communications",
+        "start": "2024-12-03T11:00:00+00:00",
+        "end": "2024-12-03T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. J A Crowcroft",
+        "uid": "1203342"
+    },
+    {
+        "summary": "Databases",
+        "start": "2024-12-03T13:00:00+00:00",
+        "end": "2024-12-03T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr D.J. Greaves",
+        "uid": "1202971"
+    },
+    {
+        "summary": "Business Studies",
+        "start": "2024-12-04T11:00:00+00:00",
+        "end": "2024-12-04T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Stewart McTavish",
+        "uid": "1203472"
+    },
+    {
+        "summary": "Semantics of Programming Languages",
+        "start": "2024-12-04T12:00:00+00:00",
+        "end": "2024-12-04T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Peter Sewell",
+        "uid": "1204406"
+    },
+    {
+        "summary": "Information Theory",
+        "start": "2024-12-04T13:00:00+00:00",
+        "end": "2024-12-04T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr R. K. Harle",
+        "uid": "1203393"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-01-23T09:00:00+00:00",
+        "end": "2025-01-23T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203307"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-01-23T10:00:00+00:00",
+        "end": "2025-01-23T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204465"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-01-23T11:00:00+00:00",
+        "end": "2025-01-23T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203379"
+    },
+    {
+        "summary": "Scientific Computing",
+        "start": "2025-01-23T13:00:00+00:00",
+        "end": "2025-01-23T13:30:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Andrew Moore",
+        "uid": "1203122"
+    },
+    {
+        "summary": "Optimising Compilers",
+        "start": "2025-01-24T10:00:00+00:00",
+        "end": "2025-01-24T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Timothy Jones",
+        "uid": "1203522"
+    },
+    {
+        "summary": "Cryptography",
+        "start": "2025-01-24T11:00:00+00:00",
+        "end": "2025-01-24T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Markus G. Kuhn",
+        "uid": "1203460"
+    },
+    {
+        "summary": "Advanced Computer Architecture",
+        "start": "2025-01-24T12:00:00+00:00",
+        "end": "2025-01-24T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Timothy M. Jones",
+        "uid": "1203488"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-01-24T14:00:00+00:00",
+        "end": "2025-01-24T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203027"
+    },
+    {
+        "summary": "Optimising Compilers",
+        "start": "2025-01-27T10:00:00+00:00",
+        "end": "2025-01-27T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Timothy Jones",
+        "uid": "1203526"
+    },
+    {
+        "summary": "Cryptography",
+        "start": "2025-01-27T11:00:00+00:00",
+        "end": "2025-01-27T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Markus G. Kuhn",
+        "uid": "1203468"
+    },
+    {
+        "summary": "Advanced Computer Architecture",
+        "start": "2025-01-27T12:00:00+00:00",
+        "end": "2025-01-27T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Timothy M. Jones",
+        "uid": "1203481"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-01-27T15:00:00+00:00",
+        "end": "2025-01-27T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251008"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-01-28T09:00:00+00:00",
+        "end": "2025-01-28T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203299"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-01-28T10:00:00+00:00",
+        "end": "2025-01-28T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204466"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-01-28T11:00:00+00:00",
+        "end": "2025-01-28T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203371"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-01-28T14:00:00+00:00",
+        "end": "2025-01-28T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203540"
+    },
+    {
+        "summary": "Optimising Compilers",
+        "start": "2025-01-29T10:00:00+00:00",
+        "end": "2025-01-29T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Timothy Jones",
+        "uid": "1203525"
+    },
+    {
+        "summary": "Cryptography",
+        "start": "2025-01-29T11:00:00+00:00",
+        "end": "2025-01-29T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Markus G. Kuhn",
+        "uid": "1203454"
+    },
+    {
+        "summary": "Advanced Computer Architecture",
+        "start": "2025-01-29T12:00:00+00:00",
+        "end": "2025-01-29T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Timothy M. Jones",
+        "uid": "1203480"
+    },
+    {
+        "summary": "Wed Seminar - Green Algorithms, Green DiSC and GREENER principles",
+        "start": "2025-01-29T15:00:00+00:00",
+        "end": "2025-01-29T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Lo\u00efc Lannelongue",
+        "uid": "1262930"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-01-30T09:00:00+00:00",
+        "end": "2025-01-30T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203308"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-01-30T10:00:00+00:00",
+        "end": "2025-01-30T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204460"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-01-30T11:00:00+00:00",
+        "end": "2025-01-30T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203366"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-01-30T14:00:00+00:00",
+        "end": "2025-01-30T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203541"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-01-31T10:00:00+00:00",
+        "end": "2025-01-31T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204493"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-01-31T11:00:00+00:00",
+        "end": "2025-01-31T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204345"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-01-31T12:00:00+00:00",
+        "end": "2025-01-31T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204445"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-01-31T14:00:00+00:00",
+        "end": "2025-01-31T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203021"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-03T10:00:00+00:00",
+        "end": "2025-02-03T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204502"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-03T11:00:00+00:00",
+        "end": "2025-02-03T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204344"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-02-03T12:00:00+00:00",
+        "end": "2025-02-03T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204442"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-02-03T15:00:00+00:00",
+        "end": "2025-02-03T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251009"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-04T09:00:00+00:00",
+        "end": "2025-02-04T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203309"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-02-04T10:00:00+00:00",
+        "end": "2025-02-04T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204467"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-04T11:00:00+00:00",
+        "end": "2025-02-04T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203380"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-04T14:00:00+00:00",
+        "end": "2025-02-04T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203542"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-05T10:00:00+00:00",
+        "end": "2025-02-05T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204500"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-05T11:00:00+00:00",
+        "end": "2025-02-05T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204332"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-02-05T12:00:00+00:00",
+        "end": "2025-02-05T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204443"
+    },
+    {
+        "summary": "Wednesday Seminar- Gabriele Mazzini",
+        "start": "2025-02-05T15:00:00+00:00",
+        "end": "2025-02-05T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture",
+        "uid": "1279160"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-06T09:00:00+00:00",
+        "end": "2025-02-06T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203300"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-02-06T10:00:00+00:00",
+        "end": "2025-02-06T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204461"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-06T11:00:00+00:00",
+        "end": "2025-02-06T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203372"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-06T14:00:00+00:00",
+        "end": "2025-02-06T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203543"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-07T10:00:00+00:00",
+        "end": "2025-02-07T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204504"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-07T11:00:00+00:00",
+        "end": "2025-02-07T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204334"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-02-07T12:00:00+00:00",
+        "end": "2025-02-07T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204449"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-02-07T14:00:00+00:00",
+        "end": "2025-02-07T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203029"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-10T10:00:00+00:00",
+        "end": "2025-02-10T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204503"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-10T11:00:00+00:00",
+        "end": "2025-02-10T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204333"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-02-10T15:00:00+00:00",
+        "end": "2025-02-10T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251010"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-11T09:00:00+00:00",
+        "end": "2025-02-11T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203310"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-02-11T10:00:00+00:00",
+        "end": "2025-02-11T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204462"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-11T11:00:00+00:00",
+        "end": "2025-02-11T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203378"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-11T14:00:00+00:00",
+        "end": "2025-02-11T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203544"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-12T10:00:00+00:00",
+        "end": "2025-02-12T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204497"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-12T11:00:00+00:00",
+        "end": "2025-02-12T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204337"
+    },
+    {
+        "summary": "Wednesday Seminar: Hardware Datapath: For machine learning and beyond",
+        "start": "2025-02-12T15:00:00+00:00",
+        "end": "2025-02-12T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture",
+        "uid": "1279161"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-13T09:00:00+00:00",
+        "end": "2025-02-13T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203301"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-02-13T10:00:00+00:00",
+        "end": "2025-02-13T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204463"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-13T11:00:00+00:00",
+        "end": "2025-02-13T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203370"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-13T14:00:00+00:00",
+        "end": "2025-02-13T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203545"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-14T10:00:00+00:00",
+        "end": "2025-02-14T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204498"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-14T11:00:00+00:00",
+        "end": "2025-02-14T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204343"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-02-14T14:00:00+00:00",
+        "end": "2025-02-14T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203024"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-17T10:00:00+00:00",
+        "end": "2025-02-17T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204496"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-17T11:00:00+00:00",
+        "end": "2025-02-17T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204350"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-02-17T15:00:00+00:00",
+        "end": "2025-02-17T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251011"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-18T09:00:00+00:00",
+        "end": "2025-02-18T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203302"
+    },
+    {
+        "summary": "Further Human-computer Interaction",
+        "start": "2025-02-18T10:00:00+00:00",
+        "end": "2025-02-18T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr L. Church, Prof A. Blackwell",
+        "uid": "1204464"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-18T11:00:00+00:00",
+        "end": "2025-02-18T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203367"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-18T14:00:00+00:00",
+        "end": "2025-02-18T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203546"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-19T10:00:00+00:00",
+        "end": "2025-02-19T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204505"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-19T11:00:00+00:00",
+        "end": "2025-02-19T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204347"
+    },
+    {
+        "summary": "Wednesday Seminar- Dr Ilan Price Google DeepMind",
+        "start": "2025-02-19T15:00:00+00:00",
+        "end": "2025-02-19T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture",
+        "uid": "1279162"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-20T09:00:00+00:00",
+        "end": "2025-02-20T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203311"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-20T11:00:00+00:00",
+        "end": "2025-02-20T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203373"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-20T14:00:00+00:00",
+        "end": "2025-02-20T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203547"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-21T10:00:00+00:00",
+        "end": "2025-02-21T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204507"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-21T11:00:00+00:00",
+        "end": "2025-02-21T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204339"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-02-21T14:00:00+00:00",
+        "end": "2025-02-21T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203031"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-24T10:00:00+00:00",
+        "end": "2025-02-24T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204495"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-24T11:00:00+00:00",
+        "end": "2025-02-24T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204342"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-02-24T15:00:00+00:00",
+        "end": "2025-02-24T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251012"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-25T09:00:00+00:00",
+        "end": "2025-02-25T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203312"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-25T11:00:00+00:00",
+        "end": "2025-02-25T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203368"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-25T14:00:00+00:00",
+        "end": "2025-02-25T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203548"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-26T10:00:00+00:00",
+        "end": "2025-02-26T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204492"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-26T11:00:00+00:00",
+        "end": "2025-02-26T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204349"
+    },
+    {
+        "summary": "Wednesday Seminar- Digital Money and Decentralised Finance",
+        "start": "2025-02-26T15:00:00+00:00",
+        "end": "2025-02-26T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Professor Frank Stajano",
+        "uid": "1279163"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-02-27T09:00:00+00:00",
+        "end": "2025-02-27T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203303"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-02-27T11:00:00+00:00",
+        "end": "2025-02-27T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203375"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-02-27T14:00:00+00:00",
+        "end": "2025-02-27T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203549"
+    },
+    {
+        "summary": "Compiler Construction",
+        "start": "2025-02-28T10:00:00+00:00",
+        "end": "2025-02-28T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with  Dr J. Yallop",
+        "uid": "1204499"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-02-28T11:00:00+00:00",
+        "end": "2025-02-28T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204341"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-02-28T14:00:00+00:00",
+        "end": "2025-02-28T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203017"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-03-03T11:00:00+00:00",
+        "end": "2025-03-03T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204340"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-03-03T15:00:00+00:00",
+        "end": "2025-03-03T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251013"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-03-04T09:00:00+00:00",
+        "end": "2025-03-04T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203304"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-03-04T11:00:00+00:00",
+        "end": "2025-03-04T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203377"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-03-04T14:00:00+00:00",
+        "end": "2025-03-04T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203550"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-03-05T11:00:00+00:00",
+        "end": "2025-03-05T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204338"
+    },
+    {
+        "summary": "Wednesday Seminar- Dr Joe Watson- Xaira Therapeutics",
+        "start": "2025-03-05T15:00:00+00:00",
+        "end": "2025-03-05T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture",
+        "uid": "1279164"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-03-06T09:00:00+00:00",
+        "end": "2025-03-06T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203305"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-03-06T11:00:00+00:00",
+        "end": "2025-03-06T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203376"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-03-06T14:00:00+00:00",
+        "end": "2025-03-06T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203551"
+    },
+    {
+        "summary": "CU3.1: One-Minute Madness: Project 'elevator pitch' (Lecture)",
+        "start": "2025-03-07T10:00:00+00:00",
+        "end": "2025-03-07T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Anil Madhavapeddy, Dr Sadiq Jaffer",
+        "uid": "1213505"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-03-07T11:00:00+00:00",
+        "end": "2025-03-07T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204346"
+    },
+    {
+        "summary": "Part II Project - How to write a dissertation",
+        "start": "2025-03-07T12:00:00+00:00",
+        "end": "2025-03-07T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Jamie Vicary",
+        "uid": "1203659"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-03-07T12:00:00+00:00",
+        "end": "2025-03-07T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204447"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-03-07T14:00:00+00:00",
+        "end": "2025-03-07T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203026"
+    },
+    {
+        "summary": "Computer Networking",
+        "start": "2025-03-10T11:00:00+00:00",
+        "end": "2025-03-10T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof A. Moore",
+        "uid": "1204335"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-03-10T12:00:00+00:00",
+        "end": "2025-03-10T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204451"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-03-10T15:00:00+00:00",
+        "end": "2025-03-10T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251014"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-03-11T09:00:00+00:00",
+        "end": "2025-03-11T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203313"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-03-11T11:00:00+00:00",
+        "end": "2025-03-11T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203374"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-03-11T14:00:00+00:00",
+        "end": "2025-03-11T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203552"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-03-12T12:00:00+00:00",
+        "end": "2025-03-12T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204446"
+    },
+    {
+        "summary": "Wednesday Seminar-Dr Edwin Brady, University St Andrew's",
+        "start": "2025-03-12T15:00:00+00:00",
+        "end": "2025-03-12T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture",
+        "uid": "1279165"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-03-13T09:00:00+00:00",
+        "end": "2025-03-13T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203314"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-03-13T11:00:00+00:00",
+        "end": "2025-03-13T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203369"
+    },
+    {
+        "summary": "Deep Neural Networks (Part II Module)",
+        "start": "2025-03-13T14:00:00+00:00",
+        "end": "2025-03-13T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr F. Huszar, Dr N. Lane",
+        "uid": "1203539"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-03-14T12:00:00+00:00",
+        "end": "2025-03-14T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204444"
+    },
+    {
+        "summary": "Machine Learning and Real-world Data",
+        "start": "2025-03-14T14:00:00+00:00",
+        "end": "2025-03-14T15:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Fermin Moscoso del Prado Martin",
+        "uid": "1203030"
+    },
+    {
+        "summary": "Logic and Proof",
+        "start": "2025-03-17T12:00:00+00:00",
+        "end": "2025-03-17T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Mateja Jamnik",
+        "uid": "1204450"
+    },
+    {
+        "summary": "L65 lecture",
+        "start": "2025-03-17T15:00:00+00:00",
+        "end": "2025-03-17T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr P. Velickovic, Prof P. Lio",
+        "uid": "1251015"
+    },
+    {
+        "summary": "Quantum Computing",
+        "start": "2025-03-18T09:00:00+00:00",
+        "end": "2025-03-18T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S. Herbert",
+        "uid": "1203306"
+    },
+    {
+        "summary": "Machine Learning and Bayesian Inference",
+        "start": "2025-03-18T11:00:00+00:00",
+        "end": "2025-03-18T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S B Holden",
+        "uid": "1203381"
+    },
+    {
+        "summary": "Part IB Group Project Results and Prizes (Exact time and format TBC)",
+        "start": "2025-03-19T12:00:00+00:00",
+        "end": "2025-03-19T16:00:00+00:00",
+        "location": "LT1",
+        "description": "Other with Prof. Alan Blackwell, Robert K. Harle",
+        "uid": "1204518"
+    },
+    {
+        "summary": "CU3.3: One-Minute Madness: Project 'elevator pitch' (Presentation)",
+        "start": "2025-03-21T14:00:00+00:00",
+        "end": "2025-03-21T17:00:00+00:00",
+        "location": "LT1",
+        "description": "Other",
+        "uid": "1213507"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-01T10:00:00+00:00",
+        "end": "2025-05-01T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203062"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-01T11:00:00+00:00",
+        "end": "2025-05-01T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204468"
+    },
+    {
+        "summary": "Wednesday Seminar",
+        "start": "2025-05-01T12:00:00+00:00",
+        "end": "2025-05-01T13:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prakash Murali",
+        "uid": "1279166"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-02T09:00:00+00:00",
+        "end": "2025-05-02T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203403"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-02T11:00:00+00:00",
+        "end": "2025-05-02T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204383"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-05T09:00:00+00:00",
+        "end": "2025-05-05T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203402"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-05T11:00:00+00:00",
+        "end": "2025-05-05T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204384"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-06T10:00:00+00:00",
+        "end": "2025-05-06T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203065"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-06T11:00:00+00:00",
+        "end": "2025-05-06T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204469"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-07T09:00:00+00:00",
+        "end": "2025-05-07T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203396"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-07T10:00:00+00:00",
+        "end": "2025-05-07T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203297"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-07T11:00:00+00:00",
+        "end": "2025-05-07T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204386"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-08T10:00:00+00:00",
+        "end": "2025-05-08T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203061"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-08T11:00:00+00:00",
+        "end": "2025-05-08T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204475"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-09T09:00:00+00:00",
+        "end": "2025-05-09T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203399"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-09T10:00:00+00:00",
+        "end": "2025-05-09T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203295"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-09T11:00:00+00:00",
+        "end": "2025-05-09T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204380"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-12T09:00:00+00:00",
+        "end": "2025-05-12T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203394"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-12T10:00:00+00:00",
+        "end": "2025-05-12T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203296"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-12T11:00:00+00:00",
+        "end": "2025-05-12T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204385"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-13T10:00:00+00:00",
+        "end": "2025-05-13T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203060"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-13T11:00:00+00:00",
+        "end": "2025-05-13T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204474"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-14T09:00:00+00:00",
+        "end": "2025-05-14T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203395"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-14T10:00:00+00:00",
+        "end": "2025-05-14T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203293"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-14T11:00:00+00:00",
+        "end": "2025-05-14T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204389"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-15T10:00:00+00:00",
+        "end": "2025-05-15T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203059"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-15T11:00:00+00:00",
+        "end": "2025-05-15T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204472"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-16T09:00:00+00:00",
+        "end": "2025-05-16T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203404"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-16T10:00:00+00:00",
+        "end": "2025-05-16T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203298"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-16T11:00:00+00:00",
+        "end": "2025-05-16T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204388"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-19T09:00:00+00:00",
+        "end": "2025-05-19T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203400"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-19T10:00:00+00:00",
+        "end": "2025-05-19T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203292"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-19T11:00:00+00:00",
+        "end": "2025-05-19T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204378"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-20T10:00:00+00:00",
+        "end": "2025-05-20T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203058"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-20T11:00:00+00:00",
+        "end": "2025-05-20T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204470"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-21T09:00:00+00:00",
+        "end": "2025-05-21T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203397"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-21T10:00:00+00:00",
+        "end": "2025-05-21T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203294"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-21T11:00:00+00:00",
+        "end": "2025-05-21T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204381"
+    },
+    {
+        "summary": "Interaction Design",
+        "start": "2025-05-22T10:00:00+00:00",
+        "end": "2025-05-22T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203064"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-22T11:00:00+00:00",
+        "end": "2025-05-22T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204471"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-23T09:00:00+00:00",
+        "end": "2025-05-23T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203398"
+    },
+    {
+        "summary": "Business Studies Seminars",
+        "start": "2025-05-23T10:00:00+00:00",
+        "end": "2025-05-23T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Seminar with  others, Stewart McTavish",
+        "uid": "1203291"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-23T11:00:00+00:00",
+        "end": "2025-05-23T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204387"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-26T09:00:00+00:00",
+        "end": "2025-05-26T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203401"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-26T11:00:00+00:00",
+        "end": "2025-05-26T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204382"
+    },
+    {
+        "summary": "Formal Models of Language",
+        "start": "2025-05-27T11:00:00+00:00",
+        "end": "2025-05-27T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Prof. Paula Buttery",
+        "uid": "1204473"
+    },
+    {
+        "summary": "Hoare Logic and Model Checking",
+        "start": "2025-05-28T09:00:00+00:00",
+        "end": "2025-05-28T10:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr C. Pulte",
+        "uid": "1203405"
+    },
+    {
+        "summary": "Artificial Intelligence",
+        "start": "2025-05-28T11:00:00+00:00",
+        "end": "2025-05-28T12:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr S Holden",
+        "uid": "1204379"
+    },
+    {
+        "summary": "Interaction Design Student Presentations",
+        "start": "2025-05-29T10:00:00+00:00",
+        "end": "2025-05-29T11:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Dr Hatice Gunes",
+        "uid": "1203063"
+    },
+    {
+        "summary": "Part II Project briefing with the Director of Undergraduate Teaching",
+        "start": "2025-05-29T13:00:00+00:00",
+        "end": "2025-05-29T14:00:00+00:00",
+        "location": "LT1",
+        "description": "Lecture with Robert K. Harle",
+        "uid": "1204520"
+    }
+]

@@ -3,4 +3,6 @@ venv/
 .env
 __pycache__/
 
-/data/database.db
+data/
+
+data/
