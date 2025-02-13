@@ -32,12 +32,32 @@ class DatabaseHandler:
             # cursor = get_db().cursor()
             # cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp, sensor_id))
             df = pd.read_sql_query(f"SELECT * FROM sensor_data WHERE timestamp = {timestamp} AND sensor_id = {sensor_id}", conn)
+            conn.close()
         return df
     
     @staticmethod
     def update_clean_db(df, *new_cols):
-        pass
+        conn = sqlite3.connect(DATABASE)
+        cursor = conn.cursor()
 
+        # Prepare the column names and placeholders for the SQL query
+        columns_str = ", ".join(new_cols)  # Convert columns to a comma-separated string
+        placeholders = ", ".join("?" for _ in new_cols)  # Create ? placeholders for each column
+        update_str = ", ".join(f"{col} = excluded.{col}" for col in new_cols)  # Create update statement
+
+        for index, row in df.iterrows():
+            values = tuple(row[col] for col in new_cols)  # Extract values for the specified columns
+            cursor.execute(
+                f"""
+                INSERT INTO sensor_data ({columns_str})
+                VALUES ({placeholders})
+                ON CONFLICT (timestamp, sensor_id) DO UPDATE SET {update_str};
+                """,
+                values
+            )
+
+        conn.commit()
+        conn.close()
 
     # read entry function (readable timestamp)
 
