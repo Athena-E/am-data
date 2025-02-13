@@ -30,7 +30,6 @@ def vectorized_kalman(values, time_deltas, variance):
         # if (i == 70):
         #     return;
 
-    print(smoothed_values[-10:])
     return smoothed_values
 
 def process_group(group, col, variance):
@@ -110,7 +109,7 @@ def clean():
 
     df = DatabaseHandler.get_all_preprocessed()
     
-    VARIANCE = 1
+    VARIANCE = 100
 
     df['timestamp'] = pd.to_numeric(df['timestamp'])
 
@@ -119,36 +118,26 @@ def clean():
         (df['timestamp'] - pd.to_timedelta(6, unit='h')).dt.floor('24h') + pd.to_timedelta(6, unit='h')
     )
 
-    # print(df)
-
     groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
 
-    # plot_sensor_data(df, '0520a5', '2025-01-20')
+    for sense in ['co2', 'humidity', 'temperature']:
 
-    # group = process_group(groups[1], 'co2', VARIANCE)
-
-
-    df['clean_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
-    df['clean_temperature'] = df['temperature'].ewm(span=20, adjust=False).mean()
-    df['clean_humidity'] = df['humidity'].ewm(span=20, adjust=False).mean()
-
-    # print("Original Values:", groups[1][-10:])  # Print the first few values
+        # print("Original Values:", groups[1][-10:])  # Print the first few values
 
 
-    # result = Parallel(n_jobs=-1)(
-    #     delayed(process_group)(group, 'co2', variance=VARIANCE) for group in groups
-    # )
+        for i in range(1):
+            groups = Parallel(n_jobs=-1)(
+                delayed(process_group)(group, sense, variance=VARIANCE) for group in groups
+            )
 
-    # final_df = pd.concat(result, ignore_index=True)
-    # print(final_df)
-    # df['new_co2'] = final_df['co2']
-    # plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2', col2='new_co2')
 
-    return {
-        'clean_co2': df['clean_co2'],
-        'clean_temperature': df['clean_temperature'],
-        'clean_humidity': df['clean_humidity']
-    }
+        final_df = pd.concat(groups, ignore_index=True)
+        df[f'new_{sense}'] = final_df[sense]
+        # plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2', col2='new_co2')
+    
+    # df['clean_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
+    # df['clean_temperature'] = df['temperature'].ewm(span=20, adjust=False).mean()
+    # df['clean_humidity'] = df['humidity'].ewm(span=20, adjust=False).mean()
 
 
 

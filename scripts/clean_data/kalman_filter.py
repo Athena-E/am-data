@@ -34,11 +34,11 @@ class KalmanFilter:
                           [0.0]])  # assume initial rate of change is 0
         
             
-        self.P = np.array([[10000.0, 0],
-                          [0, 10000.0]])
+        self.P = np.array([[1000.0, 0],
+                          [0, 1000.0]])
         
         # Measurement noise (R)
-        self.R = np.array([[measurement_variance * 1000]])
+        self.R = np.array([[measurement_variance]])
         
         # Measurement matrix (H)
         self.H = np.array([[1.0, 0]])  # we only measure the value
