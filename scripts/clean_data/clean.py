@@ -76,6 +76,8 @@ def clean():
     # df['clean_temperature'] = df['temperature'].ewm(span=20, adjust=False).mean()
     # df['clean_humidity'] = df['humidity'].ewm(span=20, adjust=False).mean()
 
+    DatabaseHandler.update_clean_db(df, 'clean-co2', 'clean-temperature', 'clean-humidity')
+
 
 
 if __name__ == "__main__":
