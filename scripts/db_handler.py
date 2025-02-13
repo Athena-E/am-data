@@ -5,7 +5,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from scripts.database import get_db
+from scripts.db.utils import get_db
 from app.config import Config
 from run import app
 
