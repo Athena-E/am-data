@@ -1,4 +1,4 @@
-from app.database import get_db
+from scripts.database import get_db
 from run import app
 
 def insert_list_sensor_data(data_list):

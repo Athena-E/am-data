@@ -5,7 +5,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from app.database import get_db
+from scripts.database import get_db
 from app.config import Config
 from run import app
 
@@ -33,6 +33,11 @@ class DatabaseHandler:
             # cursor.execute("SELECT * FROM sensor_data WHERE timestamp = ? AND sensor_id = ?", (timestamp, sensor_id))
             df = pd.read_sql_query(f"SELECT * FROM sensor_data WHERE timestamp = {timestamp} AND sensor_id = {sensor_id}", conn)
         return df
+    
+    @staticmethod
+    def update_clean_db(df, *new_cols):
+        pass
+
 
     # read entry function (readable timestamp)
 
