@@ -1,6 +1,6 @@
 import os
 
-from app.database import init_db
+from scripts.database import init_db
 from scripts.db_insert_data import insert_list_sensor_data
 
 from scripts.data_loader import get_day_data
