@@ -1,5 +1,6 @@
 from scripts.db.utils import init_db
 from scripts.data_loader.import_sensor_data import import_sensor_data
+from scripts.data_loader.import_coordinates import import_coordinates
 from scripts.clean_data.clean import clean
 
 
@@ -22,6 +23,9 @@ def main():
 
         import_sensor_data()
         print("Data Imported!")
+
+        import_coordinates()
+        print("Coordinates Imported!")
 
     if (args.clean_data):
         clean()
