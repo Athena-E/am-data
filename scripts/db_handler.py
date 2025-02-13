@@ -5,7 +5,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from app.database import get_db
+from scripts.database import get_db
 from app.config import Config
 from run import app
 
@@ -34,6 +34,10 @@ class DatabaseHandler:
 
             conn.close()
             return df
+    
+    @staticmethod
+    def update_clean_db(df, *new_cols):
+        pass
 
     # read entry function (readable timestamp)
 

@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from app.database import DATABASE
+from scripts.database import DATABASE
 
 def display_table():
     # display all records in sensor_table

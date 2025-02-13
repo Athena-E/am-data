@@ -1,0 +1,2255 @@
+{
+  "sensors": {
+    "elsys-co2-0520a2": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0520a2", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 1, 
+        "y": 318, 
+        "zf": 1.22
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 0.12, 
+        "y": -38.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971085.404", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-11-05T11:38:45.410507851Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B0649", 
+          "dev_eui": "A81758FFFE0520A2", 
+          "device_id": "elsys-co2-0520a2", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-0520a2", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:49.605436782Z"
+      }
+    }, 
+    "elsys-co2-0520a3": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0520a3", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 1, 
+        "y": 384, 
+        "zf": 0
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 0.12, 
+        "y": -46.08, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970015.377", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-11-05T11:38:50.481929743Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B7936", 
+          "dev_eui": "A81758FFFE0520A3", 
+          "device_id": "elsys-co2-0520a3", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-0520a3", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:31.572447641Z"
+      }
+    }, 
+    "elsys-co2-0520a4": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0520a4", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 144, 
+        "y": 384, 
+        "zf": 0
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 17.28, 
+        "y": -46.08, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970135.918", 
+      "acp_type_id": "elsys-co2", 
+      "acp_type_info": {
+        "acp_commit": {
+          "acp_person_id": "ijl20", 
+          "acp_person_name": "Ian Lewis", 
+          "comment": "CO2 scale max 1400, ppm"
+        }, 
+        "acp_ts": "1631649695", 
+        "acp_type_id": "elsys-co2", 
+        "day_file": "/media/acp/mqtt_acp/sensors/<acp_id>/<YYYY>/<MM>/<acp_id>_<YYYY>-<MM>-<DD>.txt", 
+        "description": "General purpose indoor enviromental sensor.", 
+        "features": {
+          "co2": {
+            "jsonpath": "$.payload_cooked.co2", 
+            "name": "CO2 (ppm)", 
+            "range": [
+              300, 
+              1400
+            ], 
+            "short_name": "co2", 
+            "units": "ppm"
+          }, 
+          "humidity": {
+            "jsonpath": "$.payload_cooked.humidity", 
+            "name": "Humidity (Percent)", 
+            "range": [
+              0, 
+              100
+            ], 
+            "short_name": "humidity", 
+            "units": "percent"
+          }, 
+          "temperature": {
+            "jsonpath": "$.payload_cooked.temperature", 
+            "name": "Temperature (Celsius)", 
+            "range": [
+              -10, 
+              40
+            ], 
+            "short_name": "temp", 
+            "units": "celsius"
+          }, 
+          "vdd": {
+            "jsonpath": "$.payload_cooked.vdd", 
+            "name": "Battery millivolts", 
+            "range": [
+              3400, 
+              3800
+            ], 
+            "short_name": "vdd", 
+            "units": "millivolts"
+          }
+        }, 
+        "name": "Elsys indoor CO2, Temp and Humidity", 
+        "notes": "", 
+        "short_name": "Elsys CO2"
+      }, 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-11-05T11:38:48.582434495Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B82B5", 
+          "dev_eui": "A81758FFFE0520A4", 
+          "device_id": "elsys-co2-0520a4", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-0520a4", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:59.001658650Z"
+      }
+    }, 
+    "elsys-co2-0520a5": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0520a5", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 27, 
+        "y": 314, 
+        "zf": 1.22
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 3.24, 
+        "y": -37.68, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971132.475", 
+      "acp_type_id": "elsys-co2", 
+      "acp_type_info": {
+        "acp_commit": {
+          "acp_person_id": "ijl20", 
+          "acp_person_name": "Ian Lewis", 
+          "comment": "CO2 scale max 1400, ppm"
+        }, 
+        "acp_ts": "1631649695", 
+        "acp_type_id": "elsys-co2", 
+        "day_file": "/media/acp/mqtt_acp/sensors/<acp_id>/<YYYY>/<MM>/<acp_id>_<YYYY>-<MM>-<DD>.txt", 
+        "description": "General purpose indoor enviromental sensor.", 
+        "features": {
+          "co2": {
+            "jsonpath": "$.payload_cooked.co2", 
+            "name": "CO2 (ppm)", 
+            "range": [
+              300, 
+              1400
+            ], 
+            "short_name": "co2", 
+            "units": "ppm"
+          }, 
+          "humidity": {
+            "jsonpath": "$.payload_cooked.humidity", 
+            "name": "Humidity (Percent)", 
+            "range": [
+              0, 
+              100
+            ], 
+            "short_name": "humidity", 
+            "units": "percent"
+          }, 
+          "temperature": {
+            "jsonpath": "$.payload_cooked.temperature", 
+            "name": "Temperature (Celsius)", 
+            "range": [
+              -10, 
+              40
+            ], 
+            "short_name": "temp", 
+            "units": "celsius"
+          }, 
+          "vdd": {
+            "jsonpath": "$.payload_cooked.vdd", 
+            "name": "Battery millivolts", 
+            "range": [
+              3400, 
+              3800
+            ], 
+            "short_name": "vdd", 
+            "units": "millivolts"
+          }
+        }, 
+        "name": "Elsys indoor CO2, Temp and Humidity", 
+        "notes": "", 
+        "short_name": "Elsys CO2"
+      }, 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-11-05T11:38:53.152399617Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B20FB", 
+          "dev_eui": "A81758FFFE0520A5", 
+          "device_id": "elsys-co2-0520a5", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-0520a5", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:05.182519969Z"
+      }
+    }, 
+    "elsys-co2-0558b3": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0558b3", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 75, 
+        "y": 375, 
+        "zf": 0.9
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 9.0, 
+        "y": -45.0, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970086.883", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF"
+    }, 
+    "elsys-co2-0559f2": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0559f2", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 117, 
+        "y": 288, 
+        "zf": 2.135
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 14.04, 
+        "y": -34.56, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971604.271", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF"
+    }, 
+    "elsys-co2-0559f3": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0559f3", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 27, 
+        "y": 288, 
+        "zf": 2.135
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 3.24, 
+        "y": -34.56, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971578.103", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF"
+    }, 
+    "elsys-co2-0559fb": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-0559fb", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 72, 
+        "y": 270, 
+        "zf": 4.265
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 8.64, 
+        "y": -32.4, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673972229.775", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF"
+    }, 
+    "elsys-co2-058ac0": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac0", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 73, 
+        "y": 295, 
+        "zf": 2.805
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 8.76, 
+        "y": -35.4, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971463.671", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:22.136829416Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B8E83", 
+          "dev_eui": "A81758FFFE058AC0", 
+          "device_id": "elsys-co2-058ac0", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac0", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:18.803802750Z"
+      }
+    }, 
+    "elsys-co2-058ac1": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac1", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 27, 
+        "y": 263, 
+        "zf": 3.05
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 3.24, 
+        "y": -31.56, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971871.095", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:30.845772442Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B785C", 
+          "dev_eui": "A81758FFFE058AC1", 
+          "device_id": "elsys-co2-058ac1", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac1", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:18.101990837Z"
+      }
+    }, 
+    "elsys-co2-058ac2": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac2", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 144, 
+        "y": 343, 
+        "zf": 0.305
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 17.28, 
+        "y": -41.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970713.473", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:34.767945261Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BC4EE", 
+          "dev_eui": "A81758FFFE058AC2", 
+          "device_id": "elsys-co2-058ac2", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac2", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:54.550958486Z"
+      }
+    }, 
+    "elsys-co2-058ac3": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac3", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 100, 
+        "y": 329, 
+        "zf": 1.585
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 12.0, 
+        "y": -39.48, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970969.312", 
+      "acp_type_id": "elsys-co2", 
+      "acp_type_info": {
+        "acp_commit": {
+          "acp_person_id": "ijl20", 
+          "acp_person_name": "Ian Lewis", 
+          "comment": "CO2 scale max 1400, ppm"
+        }, 
+        "acp_ts": "1631649695", 
+        "acp_type_id": "elsys-co2", 
+        "day_file": "/media/acp/mqtt_acp/sensors/<acp_id>/<YYYY>/<MM>/<acp_id>_<YYYY>-<MM>-<DD>.txt", 
+        "description": "General purpose indoor enviromental sensor.", 
+        "features": {
+          "co2": {
+            "jsonpath": "$.payload_cooked.co2", 
+            "name": "CO2 (ppm)", 
+            "range": [
+              300, 
+              1400
+            ], 
+            "short_name": "co2", 
+            "units": "ppm"
+          }, 
+          "humidity": {
+            "jsonpath": "$.payload_cooked.humidity", 
+            "name": "Humidity (Percent)", 
+            "range": [
+              0, 
+              100
+            ], 
+            "short_name": "humidity", 
+            "units": "percent"
+          }, 
+          "temperature": {
+            "jsonpath": "$.payload_cooked.temperature", 
+            "name": "Temperature (Celsius)", 
+            "range": [
+              -10, 
+              40
+            ], 
+            "short_name": "temp", 
+            "units": "celsius"
+          }, 
+          "vdd": {
+            "jsonpath": "$.payload_cooked.vdd", 
+            "name": "Battery millivolts", 
+            "range": [
+              3400, 
+              3800
+            ], 
+            "short_name": "vdd", 
+            "units": "millivolts"
+          }
+        }, 
+        "name": "Elsys indoor CO2, Temp and Humidity", 
+        "notes": "", 
+        "short_name": "Elsys CO2"
+      }, 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:51.401630069Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B864D", 
+          "dev_eui": "A81758FFFE058AC3", 
+          "device_id": "elsys-co2-058ac3", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac3", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:19.310899278Z"
+      }
+    }, 
+    "elsys-co2-058ac4": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac4", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 117, 
+        "y": 338, 
+        "zf": 0.305
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 14.04, 
+        "y": -40.56, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970686.075", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:53.111840008Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B36D7", 
+          "dev_eui": "A81758FFFE058AC4", 
+          "device_id": "elsys-co2-058ac4", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac4", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:51.302367335Z"
+      }
+    }, 
+    "elsys-co2-058ac5": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac5", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 144, 
+        "y": 267, 
+        "zf": 3.05
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 17.28, 
+        "y": -32.04, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971909.597", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:20.145091370Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BB74C", 
+          "dev_eui": "A81758FFFE058AC5", 
+          "device_id": "elsys-co2-058ac5", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac5", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:38.253878125Z"
+      }
+    }, 
+    "elsys-co2-058ac6": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac6", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 73, 
+        "y": 336, 
+        "zf": 1.28
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 8.76, 
+        "y": -40.32, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970798.743", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:27.529601470Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BC17A", 
+          "dev_eui": "A81758FFFE058AC6", 
+          "device_id": "elsys-co2-058ac6", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac6", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:18.407799185Z"
+      }
+    }, 
+    "elsys-co2-058ac7": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac7", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 73, 
+        "y": 312, 
+        "zf": 2.195
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 8.76, 
+        "y": -37.44, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971287.373", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:46.293821724Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B0A8F", 
+          "dev_eui": "A81758FFFE058AC7", 
+          "device_id": "elsys-co2-058ac7", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac7", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:44.243742391Z"
+      }
+    }, 
+    "elsys-co2-058ac8": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac8", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 45, 
+        "y": 329, 
+        "zf": 1.585
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 5.4, 
+        "y": -39.48, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970934.304", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:49.495342331Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B60C6", 
+          "dev_eui": "A81758FFFE058AC8", 
+          "device_id": "elsys-co2-058ac8", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac8", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:18.641236611Z"
+      }
+    }, 
+    "elsys-co2-058ac9": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ac9", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 100, 
+        "y": 312, 
+        "zf": 2.195
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 12.0, 
+        "y": -37.44, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971306.808", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:54.881682082Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B8539", 
+          "dev_eui": "A81758FFFE058AC9", 
+          "device_id": "elsys-co2-058ac9", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ac9", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:19.607925487Z"
+      }
+    }, 
+    "elsys-co2-058ade": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ade", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 73, 
+        "y": 329, 
+        "zf": 1.585
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 8.76, 
+        "y": -39.48, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970952.696", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:15.526958842Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B2679", 
+          "dev_eui": "A81758FFFE058ADE", 
+          "device_id": "elsys-co2-058ade", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ade", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:34.982291047Z"
+      }
+    }, 
+    "elsys-co2-058adf": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058adf", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 117, 
+        "y": 263, 
+        "zf": 3.05
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 14.04, 
+        "y": -31.56, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971893.451", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:12.760335996Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B8C7A", 
+          "dev_eui": "A81758FFFE058ADF", 
+          "device_id": "elsys-co2-058adf", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058adf", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:26.695799907Z"
+      }
+    }, 
+    "elsys-co2-058ae0": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae0", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 45, 
+        "y": 312, 
+        "zf": 2.195
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 5.4, 
+        "y": -37.44, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971259.630", 
+      "acp_type_id": "elsys-co2", 
+      "acp_type_info": {
+        "acp_commit": {
+          "acp_person_id": "ijl20", 
+          "acp_person_name": "Ian Lewis", 
+          "comment": "CO2 scale max 1400, ppm"
+        }, 
+        "acp_ts": "1631649695", 
+        "acp_type_id": "elsys-co2", 
+        "day_file": "/media/acp/mqtt_acp/sensors/<acp_id>/<YYYY>/<MM>/<acp_id>_<YYYY>-<MM>-<DD>.txt", 
+        "description": "General purpose indoor enviromental sensor.", 
+        "features": {
+          "co2": {
+            "jsonpath": "$.payload_cooked.co2", 
+            "name": "CO2 (ppm)", 
+            "range": [
+              300, 
+              1400
+            ], 
+            "short_name": "co2", 
+            "units": "ppm"
+          }, 
+          "humidity": {
+            "jsonpath": "$.payload_cooked.humidity", 
+            "name": "Humidity (Percent)", 
+            "range": [
+              0, 
+              100
+            ], 
+            "short_name": "humidity", 
+            "units": "percent"
+          }, 
+          "temperature": {
+            "jsonpath": "$.payload_cooked.temperature", 
+            "name": "Temperature (Celsius)", 
+            "range": [
+              -10, 
+              40
+            ], 
+            "short_name": "temp", 
+            "units": "celsius"
+          }, 
+          "vdd": {
+            "jsonpath": "$.payload_cooked.vdd", 
+            "name": "Battery millivolts", 
+            "range": [
+              3400, 
+              3800
+            ], 
+            "short_name": "vdd", 
+            "units": "millivolts"
+          }
+        }, 
+        "name": "Elsys indoor CO2, Temp and Humidity", 
+        "notes": "", 
+        "short_name": "Elsys CO2"
+      }, 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:56:58.592890091Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B1A73", 
+          "dev_eui": "A81758FFFE058AE0", 
+          "device_id": "elsys-co2-058ae0", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae0", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:59.141338015Z"
+      }
+    }, 
+    "elsys-co2-058ae1": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae1", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 73, 
+        "y": 354, 
+        "zf": 0.67
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 8.76, 
+        "y": -42.48, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970344.497", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:01.502791113Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B2E53", 
+          "dev_eui": "A81758FFFE058AE1", 
+          "device_id": "elsys-co2-058ae1", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae1", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:32.462169560Z"
+      }
+    }, 
+    "elsys-co2-058ae2": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae2", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 45, 
+        "y": 286, 
+        "zf": 3.11
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 5.4, 
+        "y": -34.32, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971707.140", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:08.514210069Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BC609", 
+          "dev_eui": "A81758FFFE058AE2", 
+          "device_id": "elsys-co2-058ae2", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae2", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:40.572455771Z"
+      }
+    }, 
+    "elsys-co2-058ae3": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae3", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 100, 
+        "y": 270, 
+        "zf": 4.265
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 12.0, 
+        "y": -32.4, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673972251.378", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:10.646101419Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BC3FD", 
+          "dev_eui": "A81758FFFE058AE3", 
+          "device_id": "elsys-co2-058ae3", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae3", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:14.851743670Z"
+      }
+    }, 
+    "elsys-co2-058ae4": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae4", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 85, 
+        "y": 303, 
+        "zf": 2.5
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 10.2, 
+        "y": -36.36, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971413.702", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:17.540510503Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BBAB4", 
+          "dev_eui": "A81758FFFE058AE4", 
+          "device_id": "elsys-co2-058ae4", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae4", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:27.802180961Z"
+      }
+    }, 
+    "elsys-co2-058ae5": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae5", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 27, 
+        "y": 338, 
+        "zf": 0.305
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 3.24, 
+        "y": -40.56, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970479.275", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:56:40.977287891Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B2660", 
+          "dev_eui": "A81758FFFE058AE5", 
+          "device_id": "elsys-co2-058ae5", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae5", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:13.976624247Z"
+      }
+    }, 
+    "elsys-co2-058ae6": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae6", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 1, 
+        "y": 343, 
+        "zf": 0.305
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 0.12, 
+        "y": -41.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970422.730", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:04.191868164Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B1C19", 
+          "dev_eui": "A81758FFFE058AE6", 
+          "device_id": "elsys-co2-058ae6", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae6", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:08.890431111Z"
+      }
+    }, 
+    "elsys-co2-058ae7": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058ae7", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 100, 
+        "y": 286, 
+        "zf": 3.11
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 12.0, 
+        "y": -34.32, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971732.677", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:06.580859782Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B1F4A", 
+          "dev_eui": "A81758FFFE058AE7", 
+          "device_id": "elsys-co2-058ae7", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058ae7", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:55.913720746Z"
+      }
+    }, 
+    "elsys-co2-058b11": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b11", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 90, 
+        "y": 345, 
+        "zf": 0.975
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 10.8, 
+        "y": -41.4, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970625.524", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:23.240417168Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BF33D", 
+          "dev_eui": "A81758FFFE058B11", 
+          "device_id": "elsys-co2-058b11", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b11", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:12.124716049Z"
+      }
+    }, 
+    "elsys-co2-058b12": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b12", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 1, 
+        "y": 293, 
+        "zf": 2.135
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 0.12, 
+        "y": -35.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971528.143", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:21.079888831Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BD2CD", 
+          "dev_eui": "A81758FFFE058B12", 
+          "device_id": "elsys-co2-058b12", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b12", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:25.491659608Z"
+      }
+    }, 
+    "elsys-co2-058b13": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b13", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 144, 
+        "y": 293, 
+        "zf": 2.135
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 17.28, 
+        "y": -35.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971632.658", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:15.288691481Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BBED6", 
+          "dev_eui": "A81758FFFE058B13", 
+          "device_id": "elsys-co2-058b13", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b13", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:37.280749984Z"
+      }
+    }, 
+    "elsys-co2-058b14": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b14", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 117, 
+        "y": 314, 
+        "zf": 1.22
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 14.04, 
+        "y": -37.68, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971160.041", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:04.442832632Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260BC715", 
+          "dev_eui": "A81758FFFE058B14", 
+          "device_id": "elsys-co2-058b14", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b14", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:50.365145226Z"
+      }
+    }, 
+    "elsys-co2-058b15": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b15", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 54, 
+        "y": 345, 
+        "zf": 0.975
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 6.48, 
+        "y": -41.4, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673970571.793", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:02.477022655Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B940B", 
+          "dev_eui": "A81758FFFE058B15", 
+          "device_id": "elsys-co2-058b15", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b15", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:16.843101046Z"
+      }
+    }, 
+    "elsys-co2-058b16": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b16", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 144, 
+        "y": 318, 
+        "zf": 1.22
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 17.28, 
+        "y": -38.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971177.576", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:19.344447748Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B6BF8", 
+          "dev_eui": "A81758FFFE058B16", 
+          "device_id": "elsys-co2-058b16", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b16", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:31.577260216Z"
+      }
+    }, 
+    "elsys-co2-058b17": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b17", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 45, 
+        "y": 270, 
+        "zf": 4.265
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 5.4, 
+        "y": -32.4, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673972197.533", 
+      "acp_type_id": "elsys-co2", 
+      "acp_type_info": {
+        "acp_commit": {
+          "acp_person_id": "ijl20", 
+          "acp_person_name": "Ian Lewis", 
+          "comment": "CO2 scale max 1400, ppm"
+        }, 
+        "acp_ts": "1631649695", 
+        "acp_type_id": "elsys-co2", 
+        "day_file": "/media/acp/mqtt_acp/sensors/<acp_id>/<YYYY>/<MM>/<acp_id>_<YYYY>-<MM>-<DD>.txt", 
+        "description": "General purpose indoor enviromental sensor.", 
+        "features": {
+          "co2": {
+            "jsonpath": "$.payload_cooked.co2", 
+            "name": "CO2 (ppm)", 
+            "range": [
+              300, 
+              1400
+            ], 
+            "short_name": "co2", 
+            "units": "ppm"
+          }, 
+          "humidity": {
+            "jsonpath": "$.payload_cooked.humidity", 
+            "name": "Humidity (Percent)", 
+            "range": [
+              0, 
+              100
+            ], 
+            "short_name": "humidity", 
+            "units": "percent"
+          }, 
+          "temperature": {
+            "jsonpath": "$.payload_cooked.temperature", 
+            "name": "Temperature (Celsius)", 
+            "range": [
+              -10, 
+              40
+            ], 
+            "short_name": "temp", 
+            "units": "celsius"
+          }, 
+          "vdd": {
+            "jsonpath": "$.payload_cooked.vdd", 
+            "name": "Battery millivolts", 
+            "range": [
+              3400, 
+              3800
+            ], 
+            "short_name": "vdd", 
+            "units": "millivolts"
+          }
+        }, 
+        "name": "Elsys indoor CO2, Temp and Humidity", 
+        "notes": "", 
+        "short_name": "Elsys CO2"
+      }, 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:09.342057286Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B228D", 
+          "dev_eui": "A81758FFFE058B17", 
+          "device_id": "elsys-co2-058b17", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b17", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:55.664729083Z"
+      }
+    }, 
+    "elsys-co2-058b18": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b18", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 1, 
+        "y": 268, 
+        "zf": 3.05
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 0.12, 
+        "y": -32.16, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971821.043", 
+      "acp_type_id": "elsys-co2", 
+      "acp_type_info": {
+        "acp_commit": {
+          "acp_person_id": "ijl20", 
+          "acp_person_name": "Ian Lewis", 
+          "comment": "CO2 scale max 1400, ppm"
+        }, 
+        "acp_ts": "1631649695", 
+        "acp_type_id": "elsys-co2", 
+        "day_file": "/media/acp/mqtt_acp/sensors/<acp_id>/<YYYY>/<MM>/<acp_id>_<YYYY>-<MM>-<DD>.txt", 
+        "description": "General purpose indoor enviromental sensor.", 
+        "features": {
+          "co2": {
+            "jsonpath": "$.payload_cooked.co2", 
+            "name": "CO2 (ppm)", 
+            "range": [
+              300, 
+              1400
+            ], 
+            "short_name": "co2", 
+            "units": "ppm"
+          }, 
+          "humidity": {
+            "jsonpath": "$.payload_cooked.humidity", 
+            "name": "Humidity (Percent)", 
+            "range": [
+              0, 
+              100
+            ], 
+            "short_name": "humidity", 
+            "units": "percent"
+          }, 
+          "temperature": {
+            "jsonpath": "$.payload_cooked.temperature", 
+            "name": "Temperature (Celsius)", 
+            "range": [
+              -10, 
+              40
+            ], 
+            "short_name": "temp", 
+            "units": "celsius"
+          }, 
+          "vdd": {
+            "jsonpath": "$.payload_cooked.vdd", 
+            "name": "Battery millivolts", 
+            "range": [
+              3400, 
+              3800
+            ], 
+            "short_name": "vdd", 
+            "units": "millivolts"
+          }
+        }, 
+        "name": "Elsys indoor CO2, Temp and Humidity", 
+        "notes": "", 
+        "short_name": "Elsys CO2"
+      }, 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:58:07.487268730Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B81EE", 
+          "dev_eui": "A81758FFFE058B18", 
+          "device_id": "elsys-co2-058b18", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b18", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:20:01.755749218Z"
+      }
+    }, 
+    "elsys-co2-058b19": {
+      "acp_commit": {
+        "acp_person_id": "jb2328", 
+        "acp_person_name": "Justas Brazauskas", 
+        "comment": "updated zf for Unity viz"
+      }, 
+      "acp_id": "elsys-co2-058b19", 
+      "acp_location": {
+        "f": 1, 
+        "system": "WGB", 
+        "x": 58, 
+        "y": 303, 
+        "zf": 2.5
+      }, 
+      "acp_location_xyz": {
+        "f": 1, 
+        "system": "XYZF", 
+        "x": 6.96, 
+        "y": -36.36, 
+        "z": 4.0
+      }, 
+      "acp_ts": "1673971380.396", 
+      "acp_type_id": "elsys-co2", 
+      "crate_id": "GW20-FF", 
+      "ttn_settings": {
+        "application_server_address": "eu1.cloud.thethings.network", 
+        "created_at": "2021-10-28T11:57:59.736513570Z", 
+        "frequency_plan_id": "EU_863_870_TTN", 
+        "ids": {
+          "application_ids": {
+            "application_id": "cambridge-net-3"
+          }, 
+          "dev_addr": "260B3CB8", 
+          "dev_eui": "A81758FFFE058B19", 
+          "device_id": "elsys-co2-058b19", 
+          "join_eui": "0000000000000000"
+        }, 
+        "join_server_address": "eu1.cloud.thethings.network", 
+        "lorawan_phy_version": "PHY_V1_0_3_REV_A", 
+        "lorawan_version": "MAC_V1_0_3", 
+        "mac_settings": {
+          "supports_32_bit_f_cnt": true
+        }, 
+        "name": "elsys-co2-058b19", 
+        "network_server_address": "eu1.cloud.thethings.network", 
+        "root_keys": {
+          "app_key": {
+            "key": "22C905D1A45D1EAED8D950B915ECC8D8"
+          }
+        }, 
+        "supports_join": true, 
+        "ttn_version": 3, 
+        "updated_at": "2021-11-05T16:19:49.292215922Z"
+      }
+    }
+  }
+}
