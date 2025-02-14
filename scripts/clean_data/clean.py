@@ -48,6 +48,8 @@ def clean():
     
     VARIANCE = 100
 
+    df['save_ts'] = df['timestamp']
+
     df['timestamp'] = pd.to_numeric(df['timestamp'])
 
     df['timestamp'] = pd.to_datetime(pd.to_numeric(df['timestamp']), unit='s')
@@ -69,14 +71,17 @@ def clean():
 
 
         final_df = pd.concat(groups, ignore_index=True)
-        df[f'clean-{sense}'] = final_df[sense]
+        # df[f'clean_{sense}'] = final_df[sense]
         # plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2', col2='new_co2')
     
     # df['clean_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
     # df['clean_temperature'] = df['temperature'].ewm(span=20, adjust=False).mean()
     # df['clean_humidity'] = df['humidity'].ewm(span=20, adjust=False).mean()
 
-    DatabaseHandler.update_clean_db(df, 'clean-co2', 'clean-temperature', 'clean-humidity')
+    final_df['timestamp'] = df['save_ts']
+    final_df['sensor_id'] = df['sensor_id']
+
+    DatabaseHandler.update_clean_db('clean_sensor_data', final_df, 'timestamp', 'sensor_id', 'co2', 'temperature', 'humidity')
 
 
 

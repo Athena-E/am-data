@@ -36,7 +36,7 @@ class DatabaseHandler:
             return df
     
     @staticmethod
-    def update_clean_db(df, *new_cols):
+    def update_clean_db(table, df, *new_cols):
         conn = sqlite3.connect(DATABASE)
         cursor = conn.cursor()
 
@@ -49,7 +49,7 @@ class DatabaseHandler:
             values = tuple(row[col] for col in new_cols)  # Extract values for the specified columns
             cursor.execute(
                 f"""
-                INSERT INTO sensor_data ({columns_str})
+                INSERT INTO {table} ({columns_str})
                 VALUES ({placeholders})
                 ON CONFLICT (timestamp, sensor_id) DO UPDATE SET {update_str};
                 """,

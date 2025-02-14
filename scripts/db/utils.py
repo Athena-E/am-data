@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 DATABASE = "./data/database.db"
 
@@ -12,7 +13,9 @@ def close_db(db):
 
 def init_db():
     conn = sqlite3.connect(DATABASE)
-    with open("./scripts/schema.sql") as f: # AE - modified to relative path
-        conn.executescript(f.read())
+    tables = os.listdir('./scripts/schemas')
+    for table in tables:
+        with open(f"./scripts/schemas/{table}") as f: # AE - modified to relative path
+            conn.executescript(f.read())
     conn.close()
         
