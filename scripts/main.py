@@ -3,6 +3,7 @@ from scripts.data_loader.import_sensor_data import import_sensor_data
 from scripts.data_loader.import_coordinates import import_coordinates
 from scripts.clean_data.clean import clean
 
+from scripts.analysis.test import test
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -30,6 +31,10 @@ def main():
     if (args.clean_data):
         clean()
         print("Data Cleaned!")
+
+    test()
+    
+
 
 
 if __name__ == "__main__":

@@ -44,7 +44,7 @@ def process_group(group, col, variance):
 
 def clean():
 
-    df = DatabaseHandler.get_all_preprocessed()
+    df = DatabaseHandler.get_all('sensor_data')
     
     VARIANCE = 100
 

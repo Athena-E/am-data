@@ -16,11 +16,11 @@ class DatabaseHandler:
     preprocessed_tbl = "sensor_data"
 
     @staticmethod
-    def get_all_preprocessed():
+    def get_all(table):
         # return all database data as data frame
         with app.app_context():
             conn = sqlite3.connect(DATABASE)
-            df = pd.read_sql_query(f"SELECT * FROM {DatabaseHandler.preprocessed_tbl}", conn)
+            df = pd.read_sql_query(f"SELECT * FROM {table}", conn)
             conn.close()
         return df
 
@@ -49,9 +49,8 @@ class DatabaseHandler:
             values = tuple(row[col] for col in new_cols)  # Extract values for the specified columns
             cursor.execute(
                 f"""
-                INSERT INTO {table} ({columns_str})
+                INSERT OR IGNORE INTO {table} ({columns_str})
                 VALUES ({placeholders})
-                ON CONFLICT (timestamp, sensor_id) DO UPDATE SET {update_str};
                 """,
                 values
             )
