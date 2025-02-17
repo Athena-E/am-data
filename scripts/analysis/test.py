@@ -16,8 +16,8 @@ def test():
         + pd.to_timedelta(6, unit='h')
     )
 
-    plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2')
+    plot_sensor_data(df, '0520a5', '2025-01-22', col1='co2')
 
-    differentiate(df, 'co2', 'timestamp', 'd-co2')
+    # differentiate(df, 'co2', 'timestamp', 'd-co2')
 
-    plot_sensor_data(df, '0520a5', '2025-01-20', col1='d-co2')
+    # plot_sensor_data(df, '0520a5', '2025-01-20', col1='d-co2')
