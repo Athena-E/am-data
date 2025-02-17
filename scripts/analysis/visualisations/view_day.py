@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import pandas as pd
 
 def plot_sensor_data(df, sensor_id, day, col1='co2', col2=None):
     """
@@ -13,7 +14,9 @@ def plot_sensor_data(df, sensor_id, day, col1='co2', col2=None):
     """
     # Filter for the selected sensor and date
     df_filtered = df[(df['sensor_id'] == sensor_id) & 
-                    (df['date_group'].dt.strftime('%Y-%m-%d') == day)]
+                    (df['date_group'].dt.strftime('%Y-%m-%d') == day)].copy()
+
+    df_filtered.loc[:, 'datetime'] = pd.to_datetime(df_filtered['timestamp'], unit='s')
     
     if df_filtered.empty:
         print(f"No data found for sensor {sensor_id} on {day}.")
@@ -26,18 +29,18 @@ def plot_sensor_data(df, sensor_id, day, col1='co2', col2=None):
     color1 = 'royalblue'
     ax1.set_xlabel("Time", fontsize=12)
     ax1.set_ylabel(col1, color=color1, fontsize=12)
-    line1 = ax1.plot(df_filtered['timestamp'], df_filtered[col1], 
+    line1 = ax1.plot(df_filtered['datetime'], df_filtered[col1], 
                      color=color1, label=col1)
     ax1.tick_params(axis='y', labelcolor=color1)
 
     lines = line1
     
     if col2:
-    # Create secondary y-axis and plot second column
+        # Create secondary y-axis and plot second column
         ax2 = ax1.twinx()
         color2 = 'darkred'
         ax2.set_ylabel(col2, color=color2, fontsize=12)
-        line2 = ax2.plot(df_filtered['timestamp'], df_filtered[col2], 
+        line2 = ax2.plot(df_filtered['datetime'], df_filtered[col2], 
                         color=color2, label=col2)
         ax2.tick_params(axis='y', labelcolor=color2)
         
@@ -56,8 +59,8 @@ def plot_sensor_data(df, sensor_id, day, col1='co2', col2=None):
     ax1.legend(lines, labels, loc='upper right')
     
     # Set x-axis limits and format
-    plt.xlim(df_filtered['timestamp'].min(), df_filtered['timestamp'].max())
-    ax1.xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H:%M'))
+    plt.xlim(df_filtered['datetime'].min(), df_filtered['datetime'].max())
+    ax1.xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%H'))
     plt.xticks(rotation=45)
     
     # Add grid but only for the primary axis

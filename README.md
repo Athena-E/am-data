@@ -4,6 +4,10 @@
 
 This project is a Flask-based web application that integrates an SQLite database and data analysis tools. It provides APIs for retrieving sensor data, visualizing trends, and performing analytics. 📊📡
 
+## Setup database
+
+Do `python -m scripts.main --add-db --clean` to create, populate and clean the database.
+
 ## Tests
 
 Add tests to `/tests` directory. Run by `python -m unittest discover` in the root directory.

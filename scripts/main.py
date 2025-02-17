@@ -1,12 +1,9 @@
-import os
-
-from app.database import init_db
-from scripts.db_insert_data import insert_list_sensor_data
-
-from scripts.data_loader import get_day_data
-
+from scripts.db.utils import init_db
+from scripts.data_loader.import_sensor_data import import_sensor_data
+from scripts.data_loader.import_coordinates import import_coordinates
 from scripts.clean_data.clean import clean
 
+from scripts.analysis.test import test
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -16,28 +13,28 @@ parser.add_argument("--clean-data", help="Clean Database?", action=argparse.Bool
 
 args = parser.parse_args()
 
+
 #* Run ```python -m scripts.main --add-db --clean-data```
 def main():
     
     if (args.add_db):
 
         init_db()
-        print("Database Initialise!")
+        print("Database Initialised!")
 
-        PREPROCESSED_DIR = './data/preprocessed'
+        import_sensor_data()
+        print("Data Imported!")
 
-        # get all preprocessed day data files
-        data_files = [f for f in os.listdir(PREPROCESSED_DIR) if os.path.isfile(os.path.join(PREPROCESSED_DIR, f))]
-
-        all_extracted = []
-        for f in data_files:
-            all_extracted += get_day_data(f)
-
-        insert_list_sensor_data(all_extracted)
-        print("Records inserted")
+        import_coordinates()
+        print("Coordinates Imported!")
 
     if (args.clean_data):
         clean()
+        print("Data Cleaned!")
+
+    test()
+    
+
 
 
 if __name__ == "__main__":

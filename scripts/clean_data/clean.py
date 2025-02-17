@@ -26,9 +26,6 @@ def vectorized_kalman(values, time_deltas, variance):
     for i in range(len(values)):
         dt = time_deltas[i] if i > 0 else 1  # Use 1 as the default dt for the first value
         smoothed_values[i] = kf.update(values[i], dt)['value']
-        # print(values[i], smoothed_values[i])
-        # if (i == 70):
-        #     return;
 
     return smoothed_values
 
@@ -37,22 +34,27 @@ def process_group(group, col, variance):
     Apply a Kalman filter using vectorized_kalman to smooth the specified column in the group.
     """
     values = group[col].values
-    time_deltas = group['timestamp'].diff().dt.total_seconds().fillna(1).values  # Time differences in seconds
+    time_deltas = group['timestamp'].diff().fillna(0).values
     group[col] = vectorized_kalman(values, time_deltas, variance)
     return group
 
 
 def clean():
 
-    df = DatabaseHandler.get_all_preprocessed()
+    df = DatabaseHandler.get_all('sensor_data')
     
     VARIANCE = 100
 
+    df['save_ts'] = df['timestamp']
+
     df['timestamp'] = pd.to_numeric(df['timestamp'])
 
-    df['timestamp'] = pd.to_datetime(pd.to_numeric(df['timestamp']), unit='s')
     df['date_group'] = (
-        (df['timestamp'] - pd.to_timedelta(6, unit='h')).dt.floor('24h') + pd.to_timedelta(6, unit='h')
+        (
+            pd.to_datetime(df['timestamp'], unit='s')
+            - pd.to_timedelta(6, unit='h')
+        ).dt.floor('24h') 
+        + pd.to_timedelta(6, unit='h')
     )
 
     groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
@@ -69,12 +71,17 @@ def clean():
 
 
         final_df = pd.concat(groups, ignore_index=True)
-        df[f'clean-{sense}'] = final_df[sense]
+        df[f'clean_{sense}'] = final_df[sense]
         # plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2', col2='new_co2')
     
-    # df['clean_co2'] = df['co2'].ewm(span=20, adjust=False).mean()
-    # df['clean_temperature'] = df['temperature'].ewm(span=20, adjust=False).mean()
-    # df['clean_humidity'] = df['humidity'].ewm(span=20, adjust=False).mean()
+    df['co2'] = df['co2'].ewm(span=50, adjust=False).mean()
+    df['temperature'] = df['temperature'].ewm(span=50, adjust=False).mean()
+    df['humidity'] = df['humidity'].ewm(span=50, adjust=False).mean()
+
+    final_df['timestamp'] = df['save_ts']
+    final_df['sensor_id'] = df['sensor_id']
+
+    DatabaseHandler.update_clean_db('clean_sensor_data', df, 'timestamp', 'sensor_id', 'co2', 'temperature', 'humidity')
 
 
 
