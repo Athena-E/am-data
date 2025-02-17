@@ -49,7 +49,7 @@ class DatabaseHandler:
             values = tuple(row[col] for col in new_cols)  # Extract values for the specified columns
             cursor.execute(
                 f"""
-                INSERT OR IGNORE INTO {table} ({columns_str})
+                INSERT OR REPLACE INTO {table} ({columns_str})
                 VALUES ({placeholders})
                 """,
                 values
