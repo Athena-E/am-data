@@ -30,7 +30,7 @@ def overlay_seat_ids(seats):
         draw.text((x - text_width//2, y), seat_id, fill="red", font=font)
 
     image = image.convert("RGB")
-    image.save("annotated_seating_plan.jpg")
+    image.save("scripts/coordinate_mapping/annotated_seating_plan.jpg")
 
 def transform_coord_system(source_points, dest_points):
     A, _, _, _ = np.linalg.lstsq(source_points, dest_points, rcond=None)
@@ -70,6 +70,26 @@ def seat_to_wgb_coords(seat_x, seat_y):
 
     return wgb_coord[:2]
 
+def wgb_to_seat_coords(wgb_x, wgb_y):
+    source_points = np.array([
+    [144, 384, 1],
+    [1, 384, 1],
+    [1, 268, 1],
+    [144, 267, 1]
+    ])
+
+    dest_points = np.array([
+    [0, 0],
+    [5732, 0],
+    [5732, 5212],
+    [0, 5212]
+    ])
+
+    input_coords = np.array([seat_x, seat_y, 1])
+    affine_matrix = transform_coord_system(source_points, dest_points)
+    seat_coord = np.dot(affine_matrix, input_coords)
+
+    return seat_coord[:2]
 
 
 if __name__ == "__main__":
@@ -77,11 +97,3 @@ if __name__ == "__main__":
     print(w, h)
     overlay_seat_ids(seats)
     print(seat_to_wgb_coords(2866,2606))
-
-
-
-
-
-
-
-
