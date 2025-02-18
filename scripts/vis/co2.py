@@ -1,31 +1,50 @@
-import sqlite3
+import numpy as np
 import matplotlib.pyplot as plt
+
+from scripts.db.utils import get_db
+
 
 def plot_co2_data():
     # Connect to the SQLite database
-    conn = sqlite3.connect('fake.db')
-    cursor = conn.cursor()
-    
-    # Execute a query to fetch timestamp and CO2 data from the sensor_data table
-    cursor.execute("SELECT timestamp, co2 FROM sensor_data")
-    data = cursor.fetchall()
+    db = get_db()
 
-    # Extract timestamps and CO2 levels from the fetched data
-    timestamps = [row[0] for row in data]
-    co2_levels = [row[1] for row in data]
+    co2_data = db.execute(
+        """
+            SELECT timestamp, MIN(co2) as min, MAX(co2) as max, AVG(co2) as avg
+            FROM clean_sensor_data 
+            WHERE co2 IS NOT NULL
+            GROUP BY ROUND(timestamp / 300)
+        """
+    ).fetchall()
+    time, min_co2_levels, max_co2_levels, avg_co2_levels = zip(*co2_data)
+    time, min_co2_levels, max_co2_levels, avg_co2_levels = (
+        np.array(time),
+        np.array(min_co2_levels),
+        np.array(max_co2_levels),
+        np.array(avg_co2_levels),
+    )
 
-    # Create a line plot with the fetched data
-    plt.figure(figsize=(10, 5))
-    plt.plot(timestamps, co2_levels, marker='o', linestyle='-', color='b')
-    plt.xlabel('Timestamp')
-    plt.ylabel('CO2 Level (ppm)')
-    plt.title('CO2 Levels Over Time')
-    plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
-    plt.tight_layout()
-    plt.show()  # Display the plot
+    # Plot the graph
+    plt.figure(figsize=(8, 4))
+    plt.plot(time, avg_co2_levels, color="blue", label="CO2 Levels")
+    plt.fill_between(
+        time, min_co2_levels, max_co2_levels, color="blue", alpha=0.2
+    )  # Shaded region
 
-    # Close the database connection
-    conn.close()
+    # Labels and title
+    plt.xlabel("Time (hours)")
+    plt.ylabel("[CO2] (ppm)")
+    plt.title("CO2 Concentration Over Time")
+
+    # Label x-axis from 0 to 24 hours
+    plt.xticks(np.linspace(min(time), max(time), 24), [str(i) for i in range(24)])
+
+    # Show grid and legend
+    plt.grid(True, linestyle="--", alpha=0.5)
+    plt.legend()
+    plt.savefig("scripts/vis/co2_levels.png")
+    plt.show()
+
 
 if __name__ == "__main__":
     plot_co2_data()
