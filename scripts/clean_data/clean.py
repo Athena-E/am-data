@@ -100,10 +100,10 @@ def clean():
             final_df = pd.concat(groups, ignore_index=True)
             df.loc[:, sense] = final_df[sense]
     
-    SPAN = 10
-    df['co2'] = df['co2'].ewm(span=SPAN, adjust=False).mean()
-    df['temperature'] = df['temperature'].ewm(span=SPAN, adjust=False).mean()
-    df['humidity'] = df['humidity'].ewm(span=SPAN, adjust=False).mean()
+    # SPAN = 10
+    # df['co2'] = df['co2'].ewm(span=SPAN, adjust=False).mean()
+    # df['temperature'] = df['temperature'].ewm(span=SPAN, adjust=False).mean()
+    # df['humidity'] = df['humidity'].ewm(span=SPAN, adjust=False).mean()
 
     DatabaseHandler.update_clean_db('clean_sensor_data', df, 'timestamp', 'sensor_id', 'co2', 'temperature', 'humidity')
 
