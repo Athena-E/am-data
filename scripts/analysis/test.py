@@ -20,7 +20,3 @@ def test():
     )
 
     plot_sensor_data(df, TEST_SENSOR, TEST_DATE, col1='co2')
-
-    differentiate(df, 'co2', 'timestamp', 'd-co2')
-
-    plot_sensor_data(df, TEST_SENSOR, TEST_DATE, col1='d-co2')

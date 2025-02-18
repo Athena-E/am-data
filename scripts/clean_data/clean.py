@@ -4,6 +4,8 @@ from joblib import Parallel, delayed
 
 from ..db_handler import DatabaseHandler
 from .kalman_filter import KalmanFilter
+from .particle_filter import ParticleFilter
+from ..analysis.visualisations.view_day import plot_sensor_data
 
 def vectorized_kalman(values, time_deltas, variance):
     """
@@ -29,23 +31,50 @@ def vectorized_kalman(values, time_deltas, variance):
 
     return smoothed_values
 
-def process_group(group, col, variance):
+def vectorized_particle_filter(values, time_deltas, variance):
     """
-    Apply a Kalman filter using vectorized_kalman to smooth the specified column in the group.
+    Apply the ParticleFilter on a sequence of values with given time deltas.
+    
+    Args:
+        values (array-like): The raw data values to be smoothed.
+        time_deltas (array-like): Time differences between consecutive measurements.
+        variance (float): Variance for the Kalman filter.
+
+    Returns:
+        np.ndarray: Smoothed values.
+    """
+    pf = ParticleFilter(
+        num_particles=1000,
+        process_variance_rate=0.5,
+        measurement_variance=variance,
+        initial_value=values[0]
+    )
+    smoothed_values = np.zeros_like(values)
+
+    for i in range(len(values)):
+        dt = time_deltas[i] if i > 0 else 1  # Use 1 as the default dt for the first value
+        pf.update(values[i], dt)
+        smoothed_values[i] = pf.estimate()
+
+    return smoothed_values
+
+def process_group(data_filter, group, col, variance):
+    """
+    Apply a filter using vectorized_{filter} to smooth the specified column in the group.
     """
     values = group[col].values
     time_deltas = group['timestamp'].diff().fillna(0).values
-    group[col] = vectorized_kalman(values, time_deltas, variance)
+    group[col] = data_filter(values, time_deltas, variance)
     return group
 
 
 def clean():
 
     df = DatabaseHandler.get_all('sensor_data')
-    
-    VARIANCE = 100
 
-    df['save_ts'] = df['timestamp']
+    # print(np.var(df['co2'][:100]))
+    
+    VARIANCE = 45 * 8
 
     df['timestamp'] = pd.to_numeric(df['timestamp'])
 
@@ -57,29 +86,24 @@ def clean():
         + pd.to_timedelta(6, unit='h')
     )
 
-    groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
+    for data_filter in [vectorized_particle_filter, vectorized_kalman]:
 
-    for sense in ['co2', 'humidity', 'temperature']:
+        groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
 
-        # print("Original Values:", groups[1][-10:])  # Print the first few values
+        for sense in ['co2', 'humidity', 'temperature']:
 
+            for i in range(1):
+                groups = Parallel(n_jobs=-1)(
+                    delayed(process_group)(data_filter, group, sense, variance=VARIANCE) for group in groups
+                )
 
-        for i in range(1):
-            groups = Parallel(n_jobs=-1)(
-                delayed(process_group)(group, sense, variance=VARIANCE) for group in groups
-            )
-
-
-        final_df = pd.concat(groups, ignore_index=True)
-        df[f'clean_{sense}'] = final_df[sense]
-        # plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2', col2='new_co2')
+            final_df = pd.concat(groups, ignore_index=True)
+            df.loc[:, sense] = final_df[sense]
     
-    df['co2'] = df['co2'].ewm(span=50, adjust=False).mean()
-    df['temperature'] = df['temperature'].ewm(span=50, adjust=False).mean()
-    df['humidity'] = df['humidity'].ewm(span=50, adjust=False).mean()
-
-    final_df['timestamp'] = df['save_ts']
-    final_df['sensor_id'] = df['sensor_id']
+    SPAN = 10
+    df['co2'] = df['co2'].ewm(span=SPAN, adjust=False).mean()
+    df['temperature'] = df['temperature'].ewm(span=SPAN, adjust=False).mean()
+    df['humidity'] = df['humidity'].ewm(span=SPAN, adjust=False).mean()
 
     DatabaseHandler.update_clean_db('clean_sensor_data', df, 'timestamp', 'sensor_id', 'co2', 'temperature', 'humidity')
 
