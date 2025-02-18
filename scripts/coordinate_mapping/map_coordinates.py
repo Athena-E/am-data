@@ -39,7 +39,6 @@ def transform_coord_system(source_points, dest_points):
     
     return affine_matrix
 
-
 def seat_to_wgb_coords(seat_x, seat_y):
     # LT1 image seating XY to WGB (xyzf)
     # (approximate for now)
@@ -85,7 +84,7 @@ def wgb_to_seat_coords(wgb_x, wgb_y):
     [0, 5212]
     ])
 
-    input_coords = np.array([seat_x, seat_y, 1])
+    input_coords = np.array([wgb_x, wgb_y, 1])
     affine_matrix = transform_coord_system(source_points, dest_points)
     seat_coord = np.dot(affine_matrix, input_coords)
 
