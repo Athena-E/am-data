@@ -4,6 +4,9 @@ from .utils.calculus import differentiate
 
 import pandas as pd
 
+TEST_SENSOR = '0520a5'
+TEST_DATE = '2025-02-07'
+
 def test():
 
     df = DatabaseHandler.get_all('clean_sensor_data')
@@ -16,8 +19,8 @@ def test():
         + pd.to_timedelta(6, unit='h')
     )
 
-    plot_sensor_data(df, '0520a5', '2025-01-20', col1='co2')
+    plot_sensor_data(df, TEST_SENSOR, TEST_DATE, col1='co2')
 
     differentiate(df, 'co2', 'timestamp', 'd-co2')
 
-    plot_sensor_data(df, '0520a5', '2025-01-20', col1='d-co2')
+    plot_sensor_data(df, TEST_SENSOR, TEST_DATE, col1='d-co2')
