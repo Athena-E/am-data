@@ -2,6 +2,7 @@ import json
 import os
 import sys
 from PIL import Image, ImageDraw, ImageFont
+import numpy as np
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -30,14 +31,57 @@ def overlay_seat_ids(seats):
 
     image = image.convert("RGB")
     image.save("annotated_seating_plan.jpg")
-    
 
-def seat_to_wgb_coords():
-    # LT1 seating XY to WGB (xyzf)
+def transform_coord_system(source_points, dest_points):
+    A, _, _, _ = np.linalg.lstsq(source_points, dest_points, rcond=None)
+
+    affine_matrix = np.vstack([A.T, [0, 0, 1]])
+    
+    return affine_matrix
+
+
+def seat_to_wgb_coords(seat_x, seat_y):
+    # LT1 image seating XY to WGB (xyzf)
     # (approximate for now)
-    pass
+    # front sensor: 72, 270
+    # upper left corner: 144, 384 -> (0, 0)
+    # upper right corner: 1, 384 -> (5732, 0)
+    # bottom right sensor: 1, 268 -> (5732, 5212)
+    # bottom left sensor: 144, 267 -> (0, 5212)
+    # image dimensions: [5732, 5212]
+    
+    source_points = np.array([
+    [0, 0, 1],
+    [5732, 0, 1],
+    [5732, 5212, 1],
+    [0, 5212, 1]
+    ])
+
+    dest_points = np.array([
+    [144, 384],
+    [1, 384],
+    [1, 268],
+    [144, 267]
+    ])
+
+    input_coords = np.array([seat_x, seat_y, 1])
+    affine_matrix = transform_coord_system(source_points, dest_points)
+    wgb_coord = np.dot(affine_matrix, input_coords)
+
+    return wgb_coord[:2]
+
+
 
 if __name__ == "__main__":
     w,h,seats = parse_seat_coords()
-    # print(seats)
+    print(w, h)
     overlay_seat_ids(seats)
+    print(seat_to_wgb_coords(2866,2606))
+
+
+
+
+
+
+
+
