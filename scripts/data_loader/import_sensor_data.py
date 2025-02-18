@@ -14,5 +14,5 @@ def import_sensor_data():
     all_extracted = []
     for f in data_files:
         all_extracted += get_day_data(f)
-
+    
     insert_list_sensor_data(all_extracted)

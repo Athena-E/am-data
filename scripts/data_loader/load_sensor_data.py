@@ -12,6 +12,8 @@ def extract_payload(data):
         "temperature": parsed_data.get("payload_cooked", {}).get("temperature"),
         "humidity": parsed_data.get("payload_cooked", {}).get("humidity"),
         "co2": parsed_data.get("payload_cooked", {}).get("co2"),
+        "motion": parsed_data.get("payload_cooked", {}).get("motion"),
+
     }
     return payload_obj
 

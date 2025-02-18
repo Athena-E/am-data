@@ -19,4 +19,4 @@ def test():
         + pd.to_timedelta(6, unit='h')
     )
 
-    plot_sensor_data(df, TEST_SENSOR, TEST_DATE, col1='co2')
+    plot_sensor_data(df, TEST_SENSOR, TEST_DATE, col1='motion')

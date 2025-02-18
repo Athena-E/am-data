@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS sensor_data (
     temperature REAL NOT NULL,
     humidity REAL NOT NULL,
     co2 REAL NOT NULL,
+    motion INTEGER NOT NULL,
     UNIQUE(sensor_id, timestamp)
 );

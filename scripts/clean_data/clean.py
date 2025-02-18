@@ -86,26 +86,26 @@ def clean():
         + pd.to_timedelta(6, unit='h')
     )
 
-    for data_filter in [vectorized_particle_filter, vectorized_kalman]:
+    # for data_filter in [vectorized_particle_filter, vectorized_kalman]:
 
-        groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
+    #     groups = [group for _, group in df.groupby(['sensor_id', 'date_group'])]
 
-        for sense in ['co2', 'humidity', 'temperature']:
+    #     for sense in ['co2']:
 
-            for i in range(1):
-                groups = Parallel(n_jobs=-1)(
-                    delayed(process_group)(data_filter, group, sense, variance=VARIANCE) for group in groups
-                )
+    #         for i in range(1):
+    #             groups = Parallel(n_jobs=-1)(
+    #                 delayed(process_group)(data_filter, group, sense, variance=VARIANCE) for group in groups
+    #             )
 
-            final_df = pd.concat(groups, ignore_index=True)
-            df.loc[:, sense] = final_df[sense]
+    #         final_df = pd.concat(groups, ignore_index=True)
+    #         df.loc[:, sense] = final_df[sense]
     
     # SPAN = 10
     # df['co2'] = df['co2'].ewm(span=SPAN, adjust=False).mean()
     # df['temperature'] = df['temperature'].ewm(span=SPAN, adjust=False).mean()
     # df['humidity'] = df['humidity'].ewm(span=SPAN, adjust=False).mean()
 
-    DatabaseHandler.update_clean_db('clean_sensor_data', df, 'timestamp', 'sensor_id', 'co2', 'temperature', 'humidity')
+    DatabaseHandler.update_clean_db('clean_sensor_data', df, 'timestamp', 'sensor_id', 'co2', 'temperature', 'humidity', 'motion')
 
 
 
