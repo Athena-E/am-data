@@ -15,7 +15,7 @@ def init_db():
     conn = sqlite3.connect(DATABASE)
     tables = os.listdir('./scripts/schemas')
     for table in tables:
-        with open(f"./scripts/schemas/{table}") as f: # AE - modified to relative path
+        with open(f"./scripts/schemas/{table}") as f: 
             conn.executescript(f.read())
     conn.close()
         

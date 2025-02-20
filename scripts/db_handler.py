@@ -58,8 +58,6 @@ class DatabaseHandler:
         conn.commit()
         conn.close()
 
-    # read entry function (readable timestamp)
-
 if __name__ == "__main__":
     db_handler = DatabaseHandler()
     # db_handler.get_all_preprocessed()

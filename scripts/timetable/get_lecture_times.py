@@ -3,6 +3,9 @@ from datetime import datetime
 from pathlib import Path
 import json
 
+ICAL_PATH = "./scripts/timetable/calendar.ical"
+TIMETABLE_JSON = "./scripts/timetable/timetable.json"
+
 def parse_ical(ics_path):
     ics = Path(ics_path)
     with ics.open() as f:
@@ -23,13 +26,16 @@ def parse_ical(ics_path):
 
     return events
 
-def save_to_json(events, filename="timetable.json"):
+def save_to_json(events, filename=TIMETABLE_JSON):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(events, f, indent=4)
 
-# {'summary': 'Artificial Intelligence', 'start': datetime.datetime(2025, 5, 28, 11, 0, tzinfo=zoneinfo.ZoneInfo(key='UTC')), 'end': datetime.datetime(2025, 5, 28, 12, 0, tzinfo=zoneinfo.ZoneInfo(key='UTC')), 'location': 'LT1', 'description': 'Lecture with Dr S Holden', 'uid': '1204379'}
+def load_timetable():
+    data = parse_ical(ICAL_PATH)
+    return data
 
 if __name__ == "__main__":
-    events = parse_ical("./calendar.ical")
+    events = parse_ical(ICAL_PATH)
     save_to_json(events)
     print("Saved LT1 lecture timetable to JSON")
+

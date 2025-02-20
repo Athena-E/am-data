@@ -1,6 +1,7 @@
 from scripts.db.utils import init_db
 from scripts.data_loader.import_sensor_data import import_sensor_data
 from scripts.data_loader.import_coordinates import import_coordinates
+from scripts.data_loader.import_timetable_data import import_timetable
 from scripts.clean_data.clean import clean
 
 from scripts.analysis.test import test
@@ -27,6 +28,9 @@ def main():
 
         import_coordinates()
         print("Coordinates Imported!")
+
+        import_timetable()
+        print("Timetable imported!")
 
     if (args.clean_data):
         clean()

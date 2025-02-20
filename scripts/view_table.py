@@ -1,4 +1,4 @@
-from scripts.db.utils import get_db
+from db.utils import get_db
 
 
 def display_table():
