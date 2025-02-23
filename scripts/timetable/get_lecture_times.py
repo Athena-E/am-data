@@ -1,5 +1,6 @@
 from icalendar import Calendar
 from datetime import datetime
+from dateutil import parser
 from pathlib import Path
 import json
 
@@ -13,10 +14,14 @@ def parse_ical(ics_path):
     events = []
 
     for event in cal.walk('VEVENT'):
+        start_iso = event.get("DTSTART").dt.isoformat()
+        end_iso = event.get("DTEND").dt.isoformat()
+        start_dt = parser.isoparse(start_iso)
+        end_dt = parser.isoparse(end_iso)
         event_data = {
             "summary": str(event.get("SUMMARY")),
-            "start": event.get("DTSTART").dt.isoformat(),  
-            "end": event.get("DTEND").dt.isoformat(),
+            "start": int(start_dt.timestamp()),  
+            "end": int(end_dt.timestamp()),
             "location": str(event.get("LOCATION")),
             "description": str(event.get("DESCRIPTION")),
             "uid": str(event.get("UID")),

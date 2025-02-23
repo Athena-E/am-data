@@ -1,6 +1,8 @@
 from scripts.db.utils import get_db
 from scripts.timetable.get_lecture_times import load_timetable
 
+# insert timetable data into database
+
 def import_timetable():
     db = get_db()
     data = load_timetable()

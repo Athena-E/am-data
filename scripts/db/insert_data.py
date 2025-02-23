@@ -2,6 +2,8 @@ from scripts.db.utils import get_db
 
 DATABASE = "./data/database.db"
 
+# insert sensor data into database
+
 def insert_list_sensor_data(data_list):
     db = get_db()
     query = '''
