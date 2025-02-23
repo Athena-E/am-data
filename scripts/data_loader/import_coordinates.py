@@ -1,6 +1,13 @@
 
 from scripts.db.utils import get_db
-from scripts.data_loader.load_coordinates import load_sensor_metadata
+import json
+
+
+
+def load_sensor_metadata(file_path):
+    with open(file_path, "r") as file:
+        data = json.load(file)
+    return data["sensors"]
 
 
 def import_coordinates():
