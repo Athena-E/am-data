@@ -3,6 +3,7 @@ import os
 import json
 from tqdm import tqdm
 
+# SLIGHTLY CONCERNED CROWD COUNT AND OCCUPENCY FILLED IS ALWAYS 0
 
 def parse(raw):
     data = json.loads(raw)
