@@ -108,7 +108,7 @@ class TestInterpolateSensorData(unittest.TestCase):
                 "co2": 400,
                 "x": 1.0,
                 "y": 0.0,
-                "zf": 0.0,
+                "zf": 1.0,
                 "timestamp": 1610000000.0,
             },
             {
@@ -124,17 +124,18 @@ class TestInterpolateSensorData(unittest.TestCase):
         ]
 
         # Define the location and timestamp for interpolation
-        location = (0.5, 0.5, 0)
+        location = (0.5, 0.5)
         timestamp = 1610000000.0
 
         # Call the function to test
-        result = interpolate_sensor_data(location, timestamp)
+        result = interpolate_sensor_data([location], timestamp)[0]
 
         # Check if the result is as expected
         expected_result = {
             "temperature": 22.75,
             "humidity": 47.5,
             "co2": 410.0,
+            "zf": 0.5,
         }
         self.assertAlmostEqual(
             result["temperature"], expected_result["temperature"], places=2
@@ -143,6 +144,7 @@ class TestInterpolateSensorData(unittest.TestCase):
             result["humidity"], expected_result["humidity"], places=2
         )
         self.assertAlmostEqual(result["co2"], expected_result["co2"], places=2)
+        self.assertAlmostEqual(result["zf"], expected_result["zf"], places=2)
 
 
 if __name__ == "__main__":

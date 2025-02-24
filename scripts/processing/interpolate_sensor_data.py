@@ -43,32 +43,33 @@ def get_sensor_data(timestamp: float) -> List[Dict]:
 
 
 def interpolate_sensor_data(
-    location: Tuple[float, float, float], timestamp: float
-) -> dict:
+    locations: List[Tuple[float, float]], timestamp: float
+) -> List[Dict]:
     """
-    Interpolate sensor data for a given location.
+    Interpolate sensor data for a given list of locations.
 
     Args:
-    location: A tuple of floats (x, y, z) representing the location to interpolate sensor data for.
+    locations: A list of tuples of floats (x, y, z) representing the locations to interpolate sensor data for.
     timestamp: A float representing the timestamp to interpolate sensor data for.
 
     Returns:
-    A dictionary containing the interpolated sensor data.
+    A list of dictionaries containing the interpolated sensor data for each location.
     """
     # Fetch sensor data records
     results = get_sensor_data(timestamp)
 
     # Interpolate the sensor data
-    locations = [(result["x"], result["y"], result["zf"]) for result in results]
+    sensor_locations = [(result["x"], result["y"]) for result in results]
 
-    sensor_data = {
-        feature: griddata(
-            locations,
+    interpolated_data = [{} for _ in range(len(locations))]  # Initialize interpolated data
+    for feature in ["temperature", "humidity", "co2", "zf"]:
+        interpolated_values = griddata(
+            sensor_locations,
             [result[feature] for result in results],
-            [location],
+            locations,
             method="linear",
-        )[0]
-        for feature in ["temperature", "humidity", "co2"]
-    }
+        )
+        for i, value in enumerate(interpolated_values):
+            interpolated_data[i][feature] = value
 
-    return sensor_data
+    return interpolated_data
