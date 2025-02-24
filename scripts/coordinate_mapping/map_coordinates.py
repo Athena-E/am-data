@@ -1,12 +1,27 @@
 import json
 import os
 import sys
+from typing import Dict, Tuple
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def parse_seat_coords():
+    """
+    Parses the seat coordinates from the floorplan JSON file.
+
+    Returns:
+        A tuple containing the width and height of the input image,
+        and a dictionary of seats:
+        {
+            seat_id: {
+                x: int
+                y: int
+                seat_id: str
+            }
+        }
+    """
     floorplan_file_path = "data/floorplan_space_ALL.json"
     with open(floorplan_file_path, "r") as file:
         data = json.load(file)
@@ -90,6 +105,9 @@ def wgb_to_seat_coords(wgb_x, wgb_y):
 
     return seat_coord[:2]
 
+def get_seat_coordinates_in_wgb() -> Dict[str, Tuple[int, int]]:    
+    _, _, seats = parse_seat_coords()
+    return {seat_id: seat_to_wgb_coords(seat["x"], seat["y"]).tolist() for seat_id, seat in seats.items()}
 
 if __name__ == "__main__":
     w,h,seats = parse_seat_coords()

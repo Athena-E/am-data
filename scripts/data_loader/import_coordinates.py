@@ -25,7 +25,7 @@ def import_coordinates():
     db.commit()
     # Insert the coordinate information into the table
     for sensor in data.values():
-        sensor_id = sensor["acp_id"]
+        sensor_id = sensor["acp_id"].split("elsys-co2-")[-1]
         sensor_location = sensor["acp_location"]
         x = sensor_location["x"]
         y = sensor_location["y"]
