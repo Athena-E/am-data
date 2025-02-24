@@ -13,6 +13,7 @@ def close_db(db):
 
 def init_db():
     conn = sqlite3.connect(DATABASE)
+    conn.execute("PRAGMA foreign_keys = ON")
     tables = os.listdir('./scripts/schemas')
     for table in tables:
         with open(f"./scripts/schemas/{table}") as f: 

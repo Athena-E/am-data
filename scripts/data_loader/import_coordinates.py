@@ -27,7 +27,7 @@ def import_coordinates():
             y REAL,
             zf REAL
         )
-    """
+        """
     )
     db.commit()
     # Insert the coordinate information into the table

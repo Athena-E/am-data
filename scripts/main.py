@@ -3,6 +3,7 @@ from scripts.data_loader.import_sensor_data import import_sensor_data
 from scripts.data_loader.import_coordinates import import_coordinates
 from scripts.data_loader.import_timetable_data import import_timetable
 from scripts.clean_data.clean import clean
+from scripts.data_loader.import_occupency import import_occupency
 
 from scripts.analysis.test import test
 
@@ -31,6 +32,9 @@ def main():
 
         import_timetable()
         print("Timetable imported!")
+
+        import_occupency()
+        print("Occupency Imported")
 
     if (args.clean_data):
         clean()
