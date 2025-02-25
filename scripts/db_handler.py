@@ -58,6 +58,19 @@ class DatabaseHandler:
         conn.commit()
         conn.close()
 
+
+    @staticmethod
+    def get_lecture_by_ts(timestamp):
+        # get lecture name from current timestamp
+        db = get_db()
+        cursor = db.execute(
+            "SELECT uid, lecture_name, start, end FROM timetable WHERE ? BETWEEN start AND end",
+            (timestamp,)
+        )
+        data = cursor.fetchone()
+
+        return bool(data)
+
 if __name__ == "__main__":
     db_handler = DatabaseHandler()
     # db_handler.get_all_preprocessed()
