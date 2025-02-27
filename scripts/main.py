@@ -8,18 +8,24 @@ from scripts.data_loader.import_occupency import import_occupency
 from scripts.analysis.test import test
 
 import argparse
+
 parser = argparse.ArgumentParser()
 
-parser.add_argument("--add-db", help="Add database?", action=argparse.BooleanOptionalAction)
-parser.add_argument("--clean-data", help="Clean Database?", action=argparse.BooleanOptionalAction)
+parser.add_argument(
+    "--add-db", help="Add database?", action=argparse.BooleanOptionalAction
+)
+parser.add_argument(
+    "--clean-data", help="Clean Database?", action=argparse.BooleanOptionalAction
+)
+parser.add_argument("--test", help="Test?", action=argparse.BooleanOptionalAction)
 
 args = parser.parse_args()
 
 
-#* Run ```python -m scripts.main --add-db --clean-data```
+# * Run ```python -m scripts.main --add-db --clean-data```
 def main():
-    
-    if (args.add_db):
+
+    if args.add_db:
 
         init_db()
         print("Database Initialised!")
@@ -36,13 +42,12 @@ def main():
         import_occupency()
         print("Occupency Imported")
 
-    if (args.clean_data):
+    if args.clean_data:
         clean()
         print("Data Cleaned!")
 
-    test()
-    
-
+    if args.test:
+        test()
 
 
 if __name__ == "__main__":
