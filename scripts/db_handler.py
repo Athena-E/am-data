@@ -69,7 +69,28 @@ class DatabaseHandler:
         )
         data = cursor.fetchone()
 
-        return bool(data)
+        return data[1] if data else None
+    
+    @staticmethod
+    def get_next_lecture_ts(timestamp):
+        db = get_db()
+        cursor = db.execute(
+            "SELECT end FROM timetable WHERE ? BETWEEN start AND end",
+            (timestamp,)
+        )
+        data = cursor.fetchone()
+
+        if data:
+            return data[0]
+        
+        cursor = db.execute(
+            "SELECT start FROM timetable WHERE start > ? ORDER BY start ASC LIMIT 1",
+            (timestamp,)
+        )
+        next_lecture = cursor.fetchone()
+
+        return next_lecture[0] if next_lecture else None
+
 
 if __name__ == "__main__":
     db_handler = DatabaseHandler()
