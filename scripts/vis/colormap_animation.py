@@ -87,4 +87,4 @@ if __name__ == "__main__":
         "SELECT MIN(timestamp), MAX(timestamp) FROM clean_sensor_data"
     ).fetchone()
     timestamps = np.linspace(int(min_timestamp), int(max_timestamp), 24 * 2).tolist()
-    plot_2d_colormap_animation(timestamps, feature="motion", resolution=30, interval=1000 // 4)
+    plot_2d_colormap_animation(timestamps, feature="humidity", resolution=30, interval=100)
