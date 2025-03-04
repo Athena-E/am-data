@@ -15,7 +15,9 @@ def edit_id(id):
     if editid[0] == "R":
         editid[2] = str(6 - int(editid[2]))
     
-    editid[1], editid[2] = editid[2], editid[1]
+    second = editid.pop(1)
+    editid.append(second)
+    
     return "".join(editid)
 
 

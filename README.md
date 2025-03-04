@@ -6,7 +6,7 @@ This project is a Flask-based web application that integrates an SQLite database
 
 ## Setup database
 
-Do `python -m scripts.main --add-db --clean` to create, populate and clean the database.
+Do `python -m scripts.main --add-db --clean --test` to create, populate and clean the database.
 
 ## Tests
 
