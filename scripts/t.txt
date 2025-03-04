@@ -1,0 +1,14 @@
+{
+    "0": {
+        "crowdcount": 55,
+        "seats_occu[pied": [
+            {
+                "seat_id": "M45",
+                "engagement": "LOW"
+            }
+        ]
+    }
+}
+
+SELECT id, crowdcount, timestamp FROM occupency;
+SELECT seat_id, engagement FROM clean_seat_data WHERE id = occupency_id;
