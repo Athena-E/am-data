@@ -7,7 +7,7 @@ def get_occupancy_seat_map(ts):
     db = get_db()
     cursor = db.cursor()
 
-    cursor.execute("select id, crowdcount, timestamp from occupency where timestamp >= 1738938183.35689 and timestamp <= 1738972800;")
+    cursor.execute("select id, crowdcount, timestamp from occupency where timestamp >= 1738886400 and timestamp <= 1738972800;")
     occupancy_recs = cursor.fetchall()
 
     occupancy_map = {}
