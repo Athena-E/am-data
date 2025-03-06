@@ -105,7 +105,7 @@ def test():
             if curr_lecture:
                 q1, q3 = int(len(crowdcounts) * 0.25), int(len(crowdcounts) * 0.75)
                 crowdcount = int(sum(crowdcounts[q1:q3]) / (q3 - q1))
-                print("Analyzing lecture", curr_lecture[1], "with crowd count", crowdcount)
+                print("Analyzing lecture", curr_lecture, "with crowd count", crowdcount)
                 analyse_lecture(cursor, crowdcount, seats_occupied)
                 conn.commit()
                 seats_occupied = defaultdict(list)
