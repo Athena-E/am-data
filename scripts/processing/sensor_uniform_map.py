@@ -5,9 +5,13 @@ from scripts.processing.get_interpolated_data_at_each_seat import (
     get_interpolated_data_at_each_seat,
 )
 from scripts.db.utils import get_db
+from datetime import datetime, timedelta
+from multiprocessing import Pool
 
 
-def get_co2_and_danger_uniform_map(timestamp: float, n: int = 50):
+def get_co2_and_danger_uniform_map(
+    seat_data, occupancy_dict, timestamp: float, n: int = 50
+):
     """
     Generate an n x n grid of CO2 values interpolated across seat locations,
     with normalized x and y coordinates, and return as JSON.
@@ -19,40 +23,20 @@ def get_co2_and_danger_uniform_map(timestamp: float, n: int = 50):
     Returns:
         json_data: JSON object with CO2 values, danger values, and normalized (x, y) coordinates
     """
-    db = get_db()
-
-    # Get interpolated data at each seat
-    seat_data = get_interpolated_data_at_each_seat(timestamp)
-
-    # Fetch occupency data with the closest timestamp for each seat
-    occupency_data = db.execute(
-        """
-        WITH ranked_occupency AS (
-            SELECT seat, crowdcount, timestamp,
-                   ROW_NUMBER() OVER (PARTITION BY seat ORDER BY ABS(timestamp - ?) ASC) AS rank
-            FROM occupency
-            JOIN seats ON occupency.id = seats.occupency_id
-        )
-        SELECT seat, crowdcount
-        FROM ranked_occupency
-        WHERE rank = 1
-        """,
-        (timestamp,),
-    ).fetchall()
-    occupency_dict = {row["seat"]: row["crowdcount"] for row in occupency_data}
-
     # Extract coordinates and values
     x = np.array([data["x"] for data in seat_data])
     y = np.array([data["y"] for data in seat_data])
     co2_values = np.array([data["co2"] for data in seat_data])
     crowdcount_values = np.array(
-        [occupency_dict.get(data["seat_id"], 0) for data in seat_data]
+        [occupancy_dict.get(data["seat_id"], 0) for data in seat_data]
     )
 
     # Smooth crowdcount values using a simple moving average
     window_size = 9
-    crowdcount_values = np.convolve(crowdcount_values, np.ones(window_size)/window_size, mode='same')
-    danger_values = (co2_values-300) * (crowdcount_values + 1)
+    crowdcount_values = np.convolve(
+        crowdcount_values, np.ones(window_size) / window_size, mode="same"
+    )
+    danger_values = (co2_values - 300) * (crowdcount_values + 1)
 
     # Define grid boundaries
     x_min, x_max = x.min(), x.max()
@@ -74,8 +58,8 @@ def get_co2_and_danger_uniform_map(timestamp: float, n: int = 50):
     yi = np.linspace(0, 1, n)
     xi, yi = np.meshgrid(xi, yi)
 
-    co2_zi = griddata((x_norm, y_norm), co2_values, (xi, yi), method="linear")
-    danger_zi = griddata((x_norm, y_norm), danger_values, (xi, yi), method="linear")
+    co2_zi = griddata((x_norm, y_norm), co2_values, (xi, yi), method="cubic")
+    danger_zi = griddata((x_norm, y_norm), danger_values, (xi, yi), method="cubic")
 
     # Fill NaNs with nearest neighbor interpolation
     if np.isnan(co2_zi).any():
@@ -85,27 +69,73 @@ def get_co2_and_danger_uniform_map(timestamp: float, n: int = 50):
             (x_norm, y_norm), danger_values, (xi, yi), method="nearest"
         )
 
-    co2_and_danger_map = []
-    for i in range(n):
-        for j in range(n):
-            co2_and_danger_map.append(
-                {
-                    "x": float(xi[i, j]),
-                    "y": float(yi[i, j]),
-                    "co2": float(co2_zi[i, j]),
-                    "danger": float(danger_zi[i, j]),
-                }
-            )
+    co2_and_danger_map = [
+        {
+            "x": round(float(xi[i, j]), 5),
+            "y": round(float(yi[i, j]), 5),
+            "co2": round(float(co2_zi[i, j]), 5),
+            "danger": round(float(danger_zi[i, j]), 5),
+        }
+        for i in range(n)
+        for j in range(n)
+    ]
 
-    return co2_and_danger_map
+    print("Processed:", datetime.fromtimestamp(timestamp))
+    return {"timestamp": timestamp, "data": co2_and_danger_map}
 
 
 def save_to_json(map, filename="./scripts/processing/co2_and_danger_uniform_map.json"):
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(map, f, indent=4)
+        json.dump(map, f, separators=(",", ":"))
+
+
+def process_timestamp(args):
+    seat_data, occupancy_dict, timestamp, n = args
+    return get_co2_and_danger_uniform_map(seat_data, occupancy_dict, timestamp, n)
 
 
 if __name__ == "__main__":
-    timestamp = 1738938183.35689  # Replace with your desired timestamp
-    co2_and_danger_uniform_map = get_co2_and_danger_uniform_map(timestamp)
-    save_to_json(co2_and_danger_uniform_map)
+    db = get_db()
+
+    # Fetch all seat data
+    seat_data = get_interpolated_data_at_each_seat(
+        0
+    )  # Use any timestamp to get seat data structure
+
+    # Fetch all occupancy data
+    occupancy_data = db.execute(
+        "SELECT seat, crowdcount, timestamp FROM occupency JOIN seats ON occupency.id = seats.occupency_id"
+    ).fetchall()
+    occupancy_dict = {}
+    for row in occupancy_data:
+        if row["seat"] not in occupancy_dict:
+            occupancy_dict[row["seat"]] = {}
+        rounded_timestamp = int(round(row["timestamp"] / 60) * 60)
+        occupancy_dict[row["seat"]][row["timestamp"]] = row["crowdcount"]
+
+    # start = datetime(2025, 2, 7, 0, 0)
+    # end = datetime(2025, 2, 7, 23, 59)
+    # timestamps = [
+    #     (start + timedelta(minutes=i)).timestamp()
+    #     for i in range(24 * 60)
+    # ]
+
+    timestamps = np.array(range(1738886400, 1738972800, 60), dtype=float)
+
+    # Prepare arguments for parallel processing
+    args = [
+        (
+            seat_data,
+            {seat: occupancy_dict[seat].get(ts, 0) for seat in occupancy_dict},
+            ts,
+            50,
+        )
+        for ts in timestamps
+    ]
+
+    # Use multiprocessing to speed up processing
+    with Pool() as pool:
+        results = pool.map(process_timestamp, args)
+
+    save_to_json(results)
+    print("Processed all timestamps.")
