@@ -13,7 +13,7 @@ TEST_DATE = '2025-02-07'
 def edit_id(id):
     editid = list(id)
     if editid[0] == "R":
-        editid[2] = str(6 - int(editid[2]))
+        editid[2] = str(7 - int(editid[2]))
     
     second = editid.pop(1)
     editid.append(second)
