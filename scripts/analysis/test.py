@@ -1,4 +1,4 @@
-from ..db_handler import DatabaseHandler
+from ..utils.db_handler import DatabaseHandler
 from .visualisations.view_day import plot_sensor_data
 from .utils.calculus import differentiate
 from ..db.utils import get_db, close_db
