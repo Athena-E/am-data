@@ -38,7 +38,6 @@ def get_co2_and_danger_uniform_map(
     )
     danger_values = (co2_values - 300) * (crowdcount_values + 1)
 
-    # Define grid boundaries
     x_min, x_max = x.min(), x.max()
     y_min, y_max = y.min(), y.max()
 
@@ -53,7 +52,7 @@ def get_co2_and_danger_uniform_map(
     else:
         y_norm = np.zeros_like(y)
 
-    # Generate normalized grid
+    # Normalised grid
     xi = np.linspace(0, 1, n)
     yi = np.linspace(0, 1, n)
     xi, yi = np.meshgrid(xi, yi)
@@ -61,7 +60,7 @@ def get_co2_and_danger_uniform_map(
     co2_zi = griddata((x_norm, y_norm), co2_values, (xi, yi), method="cubic")
     danger_zi = griddata((x_norm, y_norm), danger_values, (xi, yi), method="cubic")
 
-    # Fill NaNs with nearest neighbor interpolation
+    # Fill NaNs with nearest neighbor
     if np.isnan(co2_zi).any():
         co2_zi = griddata((x_norm, y_norm), co2_values, (xi, yi), method="nearest")
     if np.isnan(danger_zi).any():
@@ -98,11 +97,9 @@ if __name__ == "__main__":
     db = get_db()
 
     # Fetch all seat data
-    seat_data = get_interpolated_data_at_each_seat(
-        0
-    )  # Use any timestamp to get seat data structure
+    # Use any timestamp to get the seats structure
+    seat_data = get_interpolated_data_at_each_seat(0)
 
-    # Fetch all occupancy data
     occupancy_data = db.execute(
         "SELECT seat, crowdcount, timestamp FROM occupency JOIN seats ON occupency.id = seats.occupency_id"
     ).fetchall()
@@ -113,16 +110,11 @@ if __name__ == "__main__":
         rounded_timestamp = int(round(row["timestamp"] / 60) * 60)
         occupancy_dict[row["seat"]][row["timestamp"]] = row["crowdcount"]
 
-    # start = datetime(2025, 2, 7, 0, 0)
-    # end = datetime(2025, 2, 7, 23, 59)
-    # timestamps = [
-    #     (start + timedelta(minutes=i)).timestamp()
-    #     for i in range(24 * 60)
-    # ]
+    start = datetime(2025, 2, 7, 0, 0)
+    end = datetime(2025, 2, 7, 23, 59)
+    timestamps = [(start + timedelta(minutes=i)).timestamp() for i in range(24 * 60)]
 
-    timestamps = np.array(range(1738886400, 1738972800, 60), dtype=float)
-
-    # Prepare arguments for parallel processing
+    # Prepare args for multiprocessing
     args = [
         (
             seat_data,
@@ -133,7 +125,6 @@ if __name__ == "__main__":
         for ts in timestamps
     ]
 
-    # Use multiprocessing to speed up processing
     with Pool() as pool:
         results = pool.map(process_timestamp, args)
 

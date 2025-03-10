@@ -1,7 +1,7 @@
 import os
 import json
 
-from scripts.db.insert_data import insert_list_sensor_data
+from scripts.db.utils import get_db
 
 
 def extract_payload(data):
@@ -15,9 +15,9 @@ def extract_payload(data):
         "humidity": parsed_data.get("payload_cooked", {}).get("humidity"),
         "co2": parsed_data.get("payload_cooked", {}).get("co2"),
         "motion": parsed_data.get("payload_cooked", {}).get("motion"),
-
     }
     return payload_obj
+
 
 def get_day_data(fname):
     # returns list of JSON extracted data for a preprocessed data file
@@ -33,19 +33,47 @@ def get_day_data(fname):
     return day_data
 
 
+def insert_list_sensor_data(data_list):
+    db = get_db()
+    query = """
+    INSERT OR IGNORE INTO sensor_data (sensor_id, timestamp, temperature, humidity, co2, motion)
+    VALUES (?, ?, ?, ?, ?, ?)
+    """
 
-# calls methods to load and insert sensor data
+    records = [
+        (
+            data["acp_id"],
+            data["acp_ts"],
+            data["temperature"],
+            data["humidity"],
+            data["co2"],
+            data["motion"],
+        )
+        for data in data_list
+        if all(
+            k in data
+            for k in ("acp_id", "acp_ts", "temperature", "humidity", "co2", "motion")
+        )
+    ]
 
+    if records:
+        db.executemany(query, records)
+        db.commit()
+
+
+# Add all sensor data to the database from preprocessed folder
 def import_sensor_data():
-    # Add all data to the database from preprocessed folder
-    
-    PREPROCESSED_DIR = './data/preprocessed'
+    PREPROCESSED_DIR = "./data/preprocessed"
 
     # get all preprocessed day data files
-    data_files = [f for f in os.listdir(PREPROCESSED_DIR) if os.path.isfile(os.path.join(PREPROCESSED_DIR, f))]
+    data_files = [
+        f
+        for f in os.listdir(PREPROCESSED_DIR)
+        if os.path.isfile(os.path.join(PREPROCESSED_DIR, f))
+    ]
 
     all_extracted = []
     for f in data_files:
         all_extracted += get_day_data(f)
-    
+
     insert_list_sensor_data(all_extracted)

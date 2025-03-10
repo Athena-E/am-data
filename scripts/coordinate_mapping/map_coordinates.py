@@ -1,11 +1,8 @@
 import json
-import os
-import sys
 from typing import Dict, Tuple
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def parse_seat_coords():
     """
@@ -29,6 +26,7 @@ def parse_seat_coords():
     seats = data["seats"]
     return w, h, seats
 
+
 def overlay_seat_ids(seats):
     # overlay seating plan image with seat ids from sensor_locations.json
     seat_floorplan_path = "imgs/LT1_seating_uncompressed.png"
@@ -37,22 +35,24 @@ def overlay_seat_ids(seats):
 
     font = ImageFont.load_default()
     font = ImageFont.truetype("Hack-Regular.ttf", 40)
-    
+
     for seat in seats.values():
         x, y, seat_id = seat["x"], seat["y"], seat["seat_id"]
         bbox = draw.textbbox((0, 0), seat_id, font=font)
         text_width = bbox[2] - bbox[0]
-        draw.text((x - text_width//2, y), seat_id, fill="red", font=font)
+        draw.text((x - text_width // 2, y), seat_id, fill="red", font=font)
 
     image = image.convert("RGB")
     image.save("scripts/coordinate_mapping/annotated_seating_plan.jpg")
+
 
 def transform_coord_system(source_points, dest_points):
     A, _, _, _ = np.linalg.lstsq(source_points, dest_points, rcond=None)
 
     affine_matrix = np.vstack([A.T, [0, 0, 1]])
-    
+
     return affine_matrix
+
 
 def seat_to_wgb_coords(seat_x, seat_y):
     # LT1 image seating XY to WGB (xyzf)
@@ -63,20 +63,10 @@ def seat_to_wgb_coords(seat_x, seat_y):
     # bottom right sensor: 1, 268 -> (5732, 5212)
     # bottom left sensor: 144, 267 -> (0, 5212)
     # image dimensions: [5732, 5212]
-    
-    source_points = np.array([
-    [0, 0, 1],
-    [5732, 0, 1],
-    [5732, 5212, 1],
-    [0, 5212, 1]
-    ])
 
-    dest_points = np.array([
-    [144, 384],
-    [1, 384],
-    [1, 268],
-    [144, 267]
-    ])
+    source_points = np.array([[0, 0, 1], [5732, 0, 1], [5732, 5212, 1], [0, 5212, 1]])
+
+    dest_points = np.array([[144, 384], [1, 384], [1, 268], [144, 267]])
 
     input_coords = np.array([seat_x, seat_y, 1])
     affine_matrix = transform_coord_system(source_points, dest_points)
@@ -84,20 +74,11 @@ def seat_to_wgb_coords(seat_x, seat_y):
 
     return wgb_coord[:2]
 
-def wgb_to_seat_coords(wgb_x, wgb_y):
-    source_points = np.array([
-    [144, 384, 1],
-    [1, 384, 1],
-    [1, 268, 1],
-    [144, 267, 1]
-    ])
 
-    dest_points = np.array([
-    [0, 0],
-    [5732, 0],
-    [5732, 5212],
-    [0, 5212]
-    ])
+def wgb_to_seat_coords(wgb_x, wgb_y):
+    source_points = np.array([[144, 384, 1], [1, 384, 1], [1, 268, 1], [144, 267, 1]])
+
+    dest_points = np.array([[0, 0], [5732, 0], [5732, 5212], [0, 5212]])
 
     input_coords = np.array([wgb_x, wgb_y, 1])
     affine_matrix = transform_coord_system(source_points, dest_points)
@@ -105,12 +86,17 @@ def wgb_to_seat_coords(wgb_x, wgb_y):
 
     return seat_coord[:2]
 
-def get_seat_coordinates_in_wgb() -> Dict[str, Tuple[int, int]]:    
+
+def get_seat_coordinates_in_wgb() -> Dict[str, Tuple[int, int]]:
     _, _, seats = parse_seat_coords()
-    return {seat_id: seat_to_wgb_coords(seat["x"], seat["y"]).tolist() for seat_id, seat in seats.items()}
+    return {
+        seat_id: seat_to_wgb_coords(seat["x"], seat["y"]).tolist()
+        for seat_id, seat in seats.items()
+    }
+
 
 if __name__ == "__main__":
-    w,h,seats = parse_seat_coords()
+    w, h, seats = parse_seat_coords()
     print(w, h)
     overlay_seat_ids(seats)
-    print(seat_to_wgb_coords(2866,2606))
+    print(seat_to_wgb_coords(2866, 2606))
