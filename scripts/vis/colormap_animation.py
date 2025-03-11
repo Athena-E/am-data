@@ -9,16 +9,8 @@ from scipy.interpolate import griddata
 
 from datetime import datetime
 
-def plot_2d_colormap_animation(timestamps, feature="co2", resolution=50, interval=1000):
-    """
-    Create an animated 2D color map plot of sensor data across seat locations over time.
 
-    Args:
-        timestamps: list of float, Unix timestamps to get data for
-        feature: str, which feature to plot ('co2', 'temperature', or 'humidity')
-        resolution: int, number of points in each dimension for interpolation grid
-        interval: int, delay between frames in milliseconds
-    """
+def plot_2d_colormap_animation(timestamps, feature="co2", resolution=50, interval=1000):
     fig, ax = plt.subplots(figsize=(10, 8))
 
     # Normalize the color map across all timestamps
@@ -30,7 +22,7 @@ def plot_2d_colormap_animation(timestamps, feature="co2", resolution=50, interva
     vmin, vmax = min(all_values), max(all_values)
 
     def update(timestamp):
-        print('Processing:', timestamp)
+        print("Processing:", timestamp)
         ax.clear()
         seat_data = get_interpolated_data_at_each_seat(timestamp)
 
@@ -52,7 +44,9 @@ def plot_2d_colormap_animation(timestamps, feature="co2", resolution=50, interva
 
         zi = griddata((x, y), values, (xi, yi), method="cubic")
 
-        mesh = ax.pcolormesh(xi, yi, zi, cmap="viridis", shading="auto", vmin=vmin, vmax=vmax)
+        mesh = ax.pcolormesh(
+            xi, yi, zi, cmap="viridis", shading="auto", vmin=vmin, vmax=vmax
+        )
         ax.scatter(x, y, c="red", s=30, alpha=0.5, label="Seat Locations")
 
         ax.set_xlabel("X Coordinate")
@@ -67,24 +61,27 @@ def plot_2d_colormap_animation(timestamps, feature="co2", resolution=50, interva
         ax.axis("equal")
 
         # Add color bar
-        if not hasattr(update, "colorbar"):
+        if not hasattr(update, "colorbar"):  # first iteration
             update.colorbar = fig.colorbar(mesh, ax=ax, orientation="vertical")
         else:
             update.colorbar.update_normal(mesh)
 
-        return mesh,
+        return (mesh,)
 
     ani = FuncAnimation(fig, update, frames=timestamps, interval=interval, blit=False)
 
-    ani.save(f"scripts/vis/{feature}_colormap_animation.gif", writer="imagemagick", dpi=100)
+    ani.save(
+        f"scripts/vis/{feature}_colormap_animation.gif", writer="imagemagick", dpi=100
+    )
     # plt.show()
 
 
 if __name__ == "__main__":
-    # Example usage
     db = get_db()
     min_timestamp, max_timestamp = db.execute(
         "SELECT MIN(timestamp), MAX(timestamp) FROM clean_sensor_data"
     ).fetchone()
     timestamps = np.linspace(int(min_timestamp), int(max_timestamp), 24 * 2).tolist()
-    plot_2d_colormap_animation(timestamps, feature="humidity", resolution=30, interval=100)
+    plot_2d_colormap_animation(
+        timestamps, feature="humidity", resolution=30, interval=100
+    )
