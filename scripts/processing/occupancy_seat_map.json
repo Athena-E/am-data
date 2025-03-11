@@ -1,0 +1,323 @@
+{
+    "1738938185.4989269": {
+        "crowdcount": 84,
+        "seats_occupied": [
+            {
+                "seat_id": "R4J",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R4K",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M5I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M7C",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M6I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L3G",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "R4D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L4G",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M7E",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R2J",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R5K",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M8E",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M3G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L5L",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M7H",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M8C",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R0F",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R0G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L6L",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R3J",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R2G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L1G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M3D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R4B",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "R1G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R0D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R1D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R3G",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M8F",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M8G",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M6H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M9E",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R1I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M8H",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M4G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M9F",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M12I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M5D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L2D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M9H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R3A",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M5G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M7D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M7F",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R3D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M2D",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R1J",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M10F",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M9C",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R5J",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M13I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M10C",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "R0H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L4L",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M11I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M10B",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "R4H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M4I",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M2H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L1I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R5I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L4B",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M3H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M7I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M14H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M7G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M5B",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M4B",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M3I",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M2I",
+                "engagement": "HIGH"
+            },
+            {
+                "seat_id": "M12G",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M8I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "R3K",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M13H",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M13F",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M3F",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M9I",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "L5B",
+                "engagement": "NEUTRAL"
+            },
+            {
+                "seat_id": "M14E",
+                "engagement": "NEUTRAL"
+            }
+        ]
+    }
+}
