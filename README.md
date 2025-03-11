@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Database Generation
 
-To generate the database, run the database initialization script:
+To populate and clean the database, run the database initialization script:
 
 ```bash
 python -m scripts.main --add-db --clean
