@@ -6,3 +6,4 @@ data/*.db
 data/sensor_data_2025
 *.log
 *.zip
+scripts/processing/*.json
