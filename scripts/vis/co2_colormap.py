@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 from scripts.processing.get_interpolated_data_at_each_seat import (
     get_interpolated_data_at_each_seat,
 )
-from scripts.processing.interpolate_sensor_data import (
-    get_sensor_data_closest_to_timestamp,
-)
 
 
 def plot_2d_colormap(timestamp: float, feature: str = "co2", resolution: int = 50):

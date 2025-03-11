@@ -7,11 +7,10 @@ from scripts.processing.get_interpolated_data_at_each_seat import (
 from scripts.db.utils import get_db
 from datetime import datetime, timedelta
 from multiprocessing import Pool
+import numpy as np
 
 
-def get_co2_and_danger_uniform_map(
-    seat_data, occupancy_dict, timestamp: float, n: int = 50
-):
+def get_co2_and_danger_uniform_map(occupancy_dict, timestamp: float, n: int = 50):
     """
     Generate an n x n grid of CO2 values interpolated across seat locations,
     with normalized x and y coordinates, and return as JSON.
@@ -23,6 +22,9 @@ def get_co2_and_danger_uniform_map(
     Returns:
         json_data: JSON object with CO2 values, danger values, and normalized (x, y) coordinates
     """
+
+    seat_data = get_interpolated_data_at_each_seat(timestamp)
+
     # Extract coordinates and values
     x = np.array([data["x"] for data in seat_data])
     y = np.array([data["y"] for data in seat_data])
@@ -89,16 +91,14 @@ def save_to_json(map, filename="./scripts/processing/co2_and_danger_uniform_map.
 
 
 def process_timestamp(args):
-    seat_data, occupancy_dict, timestamp, n = args
-    return get_co2_and_danger_uniform_map(seat_data, occupancy_dict, timestamp, n)
+    occupancy_dict, timestamp, n = args
+    return get_co2_and_danger_uniform_map(occupancy_dict, timestamp, n)
 
 
 if __name__ == "__main__":
     db = get_db()
 
     # Fetch all seat data
-    # Use any timestamp to get the seats structure
-    seat_data = get_interpolated_data_at_each_seat(0)
 
     occupancy_data = db.execute(
         "SELECT seat, crowdcount, timestamp FROM occupency JOIN seats ON occupency.id = seats.occupency_id"
@@ -117,7 +117,6 @@ if __name__ == "__main__":
     # Prepare args for multiprocessing
     args = [
         (
-            seat_data,
             {seat: occupancy_dict[seat].get(ts, 0) for seat in occupancy_dict},
             ts,
             50,
@@ -127,6 +126,38 @@ if __name__ == "__main__":
 
     with Pool() as pool:
         results = pool.map(process_timestamp, args)
+
+    date = datetime(2025, 2, 7, 11, 0)
+    result = [r for r in results if r["timestamp"] == date.timestamp()][0]
+
+    # plot result
+    import matplotlib.pyplot as plt
+
+    n = int(np.sqrt(len(result["data"])))
+    data = result["data"]
+
+    co2 = np.zeros((n, n))
+    danger = np.zeros((n, n))
+    for idx, d in enumerate(data):
+        i = idx // n
+        j = idx % n
+        co2[i, j] = d["co2"]
+        danger[i, j] = d["danger"]
+
+    plt.figure(figsize=(12, 6))
+
+    plt.subplot(1, 2, 1)
+    plt.imshow(co2, origin="lower", extent=[0, 1, 0, 1])
+    plt.title("CO2 Levels")
+    plt.colorbar()
+
+    plt.subplot(1, 2, 2)
+    plt.imshow(danger, origin="lower", extent=[0, 1, 0, 1])
+    plt.title("Danger Levels")
+    plt.colorbar()
+
+    plt.suptitle(f"Results at {datetime.fromtimestamp(result['timestamp'])}")
+    plt.show()
 
     save_to_json(results)
     print("Processed all timestamps.")
