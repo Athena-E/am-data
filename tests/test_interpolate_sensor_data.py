@@ -12,6 +12,8 @@ class TestInterpolateSensorData(unittest.TestCase):
 
     @patch("scripts.processing.interpolate_sensor_data.get_db")
     def test_get_sensor_data(self, mock_get_db):
+        # Arrange
+
         # Mock the database connection and cursor
         mock_conn = sqlite3.connect(":memory:")  # Create an in-memory database
         mock_conn.row_factory = sqlite3.Row  # Allows accessing columns by name
@@ -51,10 +53,10 @@ class TestInterpolateSensorData(unittest.TestCase):
         sensor_data_df.to_sql("sensor_data", mock_conn, index=False)
         coordinates_df.to_sql("coordinates", mock_conn, index=False)
 
-        # Call the function to test
+        # Act
         result = get_sensor_data(timestamp)
 
-        # Check if the result is as expected
+        # Assert
         expected_result = [
             {
                 **base_sensor_data,
@@ -78,6 +80,8 @@ class TestInterpolateSensorData(unittest.TestCase):
 
     @patch("scripts.processing.interpolate_sensor_data.get_sensor_data")
     def test_interpolate_sensor_data(self, mock_get_sensor_data):
+        # Arrange
+
         # Mock the data returned by get_sensor_data
         # four sensors with data at the same timestamp, located at the corners of a square
         mock_get_sensor_data.return_value = [
@@ -127,10 +131,10 @@ class TestInterpolateSensorData(unittest.TestCase):
         location = (0.5, 0.5)
         timestamp = 1610000000.0
 
-        # Call the function to test
+        # Act
         result = interpolate_sensor_data([location], timestamp)[0]
 
-        # Check if the result is as expected
+        # Assert
         expected_result = {
             "temperature": 22.75,
             "humidity": 47.5,

@@ -1,6 +1,7 @@
 import unittest
 from scripts.clean_data.kalman_filter import KalmanFilter
 
+
 class TestKalmanFilter(unittest.TestCase):
 
     def test_initialization(self):
@@ -25,7 +26,7 @@ class TestKalmanFilter(unittest.TestCase):
 
         measured_value = 5.0
         dt = 1.0
-        filtered_value = kf.update(measured_value, dt)['value']
+        filtered_value = kf.update(measured_value, dt)["value"]
 
         # TODO: Check if the filtered value is within a reasonable range
         self.assertTrue(0.0 <= filtered_value <= 5.0)
@@ -38,10 +39,11 @@ class TestKalmanFilter(unittest.TestCase):
 
         measured_value = 10.0
         dt = 1.0
-        filtered_value = kf.update(measured_value, dt)['value']
+        filtered_value = kf.update(measured_value, dt)["value"]
 
         # TODO: Check if the filtered value is close to the measured value
         self.assertAlmostEqual(filtered_value, measured_value, places=1)
+
 
 if __name__ == "__main__":
     unittest.main()

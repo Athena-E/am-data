@@ -22,17 +22,10 @@ def get_interpolated_data_at_each_seat(timestamp: float) -> List[Dict]:
         - crowdcount: from the occupency data
     """
     db = get_db()
-
-    # Get all seat coordinates
     seat_coordinates = get_seat_coordinates()
-
-    # Convert seat coordinates to format needed for interpolation
     locations = list(seat_coordinates.values())
-
-    # Get interpolated data for all locations
     interpolated_data = interpolate_sensor_data(locations, timestamp)
 
-    # Fetch occupency data
     occupency_data = db.execute(
         """
         WITH ranked_occupency AS (
@@ -44,7 +37,8 @@ def get_interpolated_data_at_each_seat(timestamp: float) -> List[Dict]:
         SELECT seat, crowdcount
         FROM ranked_occupency
         WHERE rank = 1
-        """, (timestamp,)
+        """,
+        (timestamp,),
     ).fetchall()
     occupency_dict = {row["seat"]: row["crowdcount"] for row in occupency_data}
 

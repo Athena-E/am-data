@@ -1,90 +1,73 @@
 # 🚀 Volatile Raccoon 🔥
 
-## 📜 Overview 🎯
+This repository contains data management tools and datasets for the Atmospheric Metaverse project. 
 
-This project is a Flask-based web application that integrates an SQLite database and data analysis tools. It provides APIs for retrieving sensor data, visualizing trends, and performing analytics. 📊📡
+## Getting Started
 
-## Setup database
+### Prerequisites
 
-Do `python -m scripts.main --add-db --clean --test` to create, populate and clean the database.
+- Python 3.8 or higher
+- SQLite 3.34+
 
-## Tests
+### Installation
 
-Add tests to `/tests` directory. Run by `python -m unittest discover` in the root directory.
-
-## 🌟 Features 💡
-
-- Flask backend with REST API
-- SQLite database for sensor data storage
-- Data processing and analysis using Pandas & NumPy
-- Modular structure for scalability
-- Basic web UI (if applicable)
-
-## 🛠️ Setup Instructions ⚙️
-
-### 1️⃣ Clone the Repository 🖥️
-
-```sh
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-```
-
-### 2️⃣ Set Up a Virtual Environment (Python 3) 🐍
-
-```sh
-python3 -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate     # On Windows
-```
-
-### 3️⃣ Install Dependencies 📦
-
-```sh
+```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Set Up Environment Variables 🌍
+## Database Generation
 
-Create a `.env` file in the root directory:
+To populate and clean the database, run the database initialization script:
 
-```
-FLASK_APP=run.py
-FLASK_ENV=development
-SECRET_KEY=your-secret-key
-DATABASE_URL=sqlite:///data/database.db
+```bash
+python -m scripts.main --add-db --clean
 ```
 
-### 5️⃣ Initialize the Database 🗄️
+## Key Directory Structure
 
-```sh
-python scripts/init_db.py
+Below is an overview of the main directories and scripts in the repository:
+
+- `/analysis`:
+    Preliminary analyses.    
+
+- `/data`:  
+    Contains raw and processed datasets used across the project.
+
+- `/imgs`:  
+    Stores project-relavant images.
+
+- `/scripts/clean_data`:  
+    Includes scripts for cleaning and preprocessing raw data files to remove sensor noise.
+
+- `/scripts/coordinate_mapping`:  
+    Handles the transformation between William Gate Building (WGB) coordinates and data coordinates.
+
+- `/scripts/data_loader`:  
+    Contains utilities for loading datasets into the application or database.
+
+- `/scripts/processing`:  
+    Provides scripts to transform data from the internal format to a format usable by the VR team, including interpolation of sensor values.
+
+- `/scripts/vis`:  
+    Contains visualisations to gain insights for the project. This is mostly for internal use only, so the documentation is not very complete.
+
+- `/tests`: 
+    Contains tests for the important functions.
+
+## Usage
+
+### Running a file
+
+Run the dedicated file as a module. For instance, if we want to invoke `/scripts/vis/co2_colormap.py`, run
+
+```bash
+python -m scripts.vis.co2_colormap
 ```
 
-### 6️⃣ Run the Flask App 🚀
+### Running tests
 
-```sh
-flask run
+`unittest` is used for testing. To run them, use
+
+```bash
+python -m unittest discover
 ```
-
-By default, the app will be accessible at `http://127.0.0.1:5000/`. 🌍
-
-## 📂 Directory Structure 🏗️
-
-```
-/AM-DATA
-│── /app              # Flask application
-│   ├── /static       # Frontend assets
-│   ├── /templates    # HTML templates
-│   ├── /routes       # Flask route handlers
-│   ├── /models       # Database models
-│   ├── /services     # Business logic & data processing
-│   ├── config.py     # Config settings
-│── /data             # Database & raw sensor data
-│── /scripts          # Utility scripts (DB init, data import)
-│── .env              # Environment variables
-│── requirements.txt   # Dependencies
-│── run.py            # Flask entry point
-│── README.md         # This file
-```
-
----

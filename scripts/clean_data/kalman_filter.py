@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class KalmanFilter:
     """
     A generic Kalman filter implementation that can track any type of continuous value.
@@ -13,11 +14,8 @@ class KalmanFilter:
         H (numpy.ndarray): Measurement matrix that defines how the state vector relates to measurements.
         q (float): Process noise parameter that can be tuned for different applications.
     """
-    def __init__(
-            self,
-            initial_value=0, 
-            measurement_variance=0.1
-        ):
+
+    def __init__(self, initial_value=0, measurement_variance=0.1):
         """
         Initialize the Kalman filter with customizable parameters.
 
@@ -30,22 +28,21 @@ class KalmanFilter:
             process_noise (float): Process noise parameter (q) for the system dynamics.
         """
         # State vector [value, rate_of_change]
-        self.x = np.array([[initial_value],
-                          [0.0]])  # assume initial rate of change is 0
-        
-            
-        self.P = np.array([[1000.0, 0],
-                          [0, 1000.0]])
-        
+        self.x = np.array(
+            [[initial_value], [0.0]]
+        )  # assume initial rate of change is 0
+
+        self.P = np.array([[1000.0, 0], [0, 1000.0]])
+
         # Measurement noise (R)
         self.R = np.array([[measurement_variance]])
-        
+
         # Measurement matrix (H)
         self.H = np.array([[1.0, 0]])  # we only measure the value
-        
+
         # Process noise parameter
         self.q = 0.001
-        
+
     def update(self, measured_value, dt):
         """
         Update the filter's estimate based on a new measurement and time step.
@@ -62,35 +59,38 @@ class KalmanFilter:
                 - 'velocity_uncertainty': uncertainty in the velocity estimate
         """
         # State transition matrix
-        F = np.array([[1, dt],
-                     [0, 1]])
-        
+        F = np.array([[1, dt], [0, 1]])
+
         # Process noise covariance matrix
-        Q = np.array([[self.q * dt**3 / 3, self.q * dt**2 / 2],
-                     [self.q * dt**2 / 2, self.q * dt]])
-        
+        Q = np.array(
+            [
+                [self.q * dt**3 / 3, self.q * dt**2 / 2],
+                [self.q * dt**2 / 2, self.q * dt],
+            ]
+        )
+
         # Predict
         self.x = np.dot(F, self.x)
         self.P = np.dot(np.dot(F, self.P), F.T) + Q
-        
+
         # Update
         z = np.array([[measured_value]])
         y = z - np.dot(self.H, self.x)
         S = np.dot(np.dot(self.H, self.P), self.H.T) + self.R
         K = np.dot(np.dot(self.P, self.H.T), np.linalg.inv(S))
-        
+
         self.x = self.x + np.dot(K, y)
         I = np.eye(2)
         self.P = np.dot((I - np.dot(K, self.H)), self.P)
-        
+
         # Return current state and uncertainties
         return {
-            'value': float(self.x[0]),
-            'velocity': float(self.x[1]),
-            'value_uncertainty': float(self.P[0,0]),
-            'velocity_uncertainty': float(self.P[1,1])
+            "value": float(self.x[0]),
+            "velocity": float(self.x[1]),
+            "value_uncertainty": float(self.P[0, 0]),
+            "velocity_uncertainty": float(self.P[1, 1]),
         }
-    
+
     def get_state(self):
         """
         Get the current state estimate and uncertainties.
@@ -99,8 +99,8 @@ class KalmanFilter:
             dict: Current state and uncertainty values
         """
         return {
-            'value': float(self.x[0]),
-            'velocity': float(self.x[1]),
-            'value_uncertainty': float(self.P[0,0]),
-            'velocity_uncertainty': float(self.P[1,1])
+            "value": float(self.x[0]),
+            "velocity": float(self.x[1]),
+            "value_uncertainty": float(self.P[0, 0]),
+            "velocity_uncertainty": float(self.P[1, 1]),
         }

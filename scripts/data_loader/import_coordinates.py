@@ -1,7 +1,5 @@
-
 from scripts.db.utils import get_db
 import json
-
 
 
 def load_sensor_metadata(file_path):
@@ -10,15 +8,14 @@ def load_sensor_metadata(file_path):
     return data["sensors"]
 
 
+# Import sensor location data from sensor metadata
 def import_coordinates():
     db = get_db()
-    data = load_sensor_metadata('./data/sensor_locations.json')
+    data = load_sensor_metadata("./data/sensor_locations.json")
 
-    # Drop the table if exists
     db.execute("DROP TABLE IF EXISTS coordinates")
     db.commit()
 
-    # Create the coordinates table if it doesn't exist
     db.execute(
         """
         CREATE TABLE coordinates (
@@ -30,7 +27,7 @@ def import_coordinates():
         """
     )
     db.commit()
-    # Insert the coordinate information into the table
+
     for sensor in data.values():
         sensor_id = sensor["acp_id"].split("elsys-co2-")[-1]
         sensor_location = sensor["acp_location"]

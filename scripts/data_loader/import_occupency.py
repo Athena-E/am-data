@@ -3,7 +3,6 @@ import os
 import json
 from tqdm import tqdm
 
-# SLIGHTLY CONCERNED CROWD COUNT AND OCCUPENCY FILLED IS ALWAYS 0
 
 def parse(raw):
     data = json.loads(raw)
@@ -15,6 +14,7 @@ def parse(raw):
     payload["seats"] = data["payload_cooked"]["seats_occupied"].values()
     return payload
 
+
 def get_next_file(folder):
     for f in os.listdir(folder):
         path = os.path.join(folder, f)
@@ -23,8 +23,9 @@ def get_next_file(folder):
         elif os.path.isdir(path):
             yield from get_next_file(path)
 
-def import_occupency():
 
+# Import occupency data from camera data
+def import_occupency():
     folder = "./data/preprocessed/camera"
 
     gen = get_next_file(folder)
@@ -37,15 +38,29 @@ def import_occupency():
                 try:
                     payload = parse(line)
 
-                    assert all(
-                        map(
-                            lambda seat: all(
-                                ["seat_id" in seat, "seat_confidence" in seat, "model_confidence" in seat]
-                            ), payload["occupency_filled"]
+                    assert (
+                        all(
+                            map(
+                                lambda seat: all(
+                                    [
+                                        "seat_id" in seat,
+                                        "seat_confidence" in seat,
+                                        "model_confidence" in seat,
+                                    ]
+                                ),
+                                payload["occupency_filled"],
+                            )
                         )
-                    ) or len(payload["occupency_filled"]) == 0
+                        or len(payload["occupency_filled"]) == 0
+                    )
 
-                    assert all(["crowd_count" in payload, "occupency_filled" in payload, "timestamp" in payload])
+                    assert all(
+                        [
+                            "crowd_count" in payload,
+                            "occupency_filled" in payload,
+                            "timestamp" in payload,
+                        ]
+                    )
 
                 except:
                     pass
@@ -55,7 +70,12 @@ def import_occupency():
                     INSERT OR REPLACE INTO occupency
                     (crowdcount, occupency_filled, timestamp)
                     VALUES (?, ?, ?)
-                    """, (payload["crowd_count"], payload["occupency_filled"], payload["timestamp"])
+                    """,
+                    (
+                        payload["crowd_count"],
+                        payload["occupency_filled"],
+                        payload["timestamp"],
+                    ),
                 )
 
                 ref = cursor.lastrowid
@@ -67,9 +87,13 @@ def import_occupency():
                         (seat, occupency_id, seat_confidence, model_confidence)
                         VALUES (?, ?, ?, ?)
                         """,
-                        (seat["seat_id"], ref, seat["seat_confidence"], seat["model_confidence"])
+                        (
+                            seat["seat_id"],
+                            ref,
+                            seat["seat_confidence"],
+                            seat["model_confidence"],
+                        ),
                     )
-                    
+
     conn.commit()
     conn.close()
-
